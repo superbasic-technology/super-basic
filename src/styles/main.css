@@ -1,0 +1,38 @@
+.container {
+  display: grid;
+  grid-template: repeat(1, 1fr 5fr 1fr) / repeat(3, 1fr);
+  grid-template-areas:  "header header header"
+                        "sidebar-left main-content sidebar-right"
+                        "footer footer footer";
+  
+  height: 100vh;
+  & header {
+    background: #f00;
+    grid-column: 1 / 4;
+  }
+
+  & main {
+    background: #0f0;
+    grid-column: 1 / 4;
+
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(1, 1fr 4fr 1fr);
+
+    .sidebar.left {
+      background: #f00;
+    }
+
+    .main-content {
+      background: #0f0;
+    }
+
+    .sidebar.right {
+      background: #00f;
+    }
+  }
+
+  & footer {
+    background: #00f;
+    grid-column: 1 / 4;
+  }
+}
