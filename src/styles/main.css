@@ -1,3 +1,20 @@
+:root {
+  --primary-color: #1e90ff;
+  --secondary-color: #ff6347;
+  --color-red: #f00;
+  --color-green: #0f0;
+  --color-blue: #00f;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
 .container {
   display: grid;
   grid-template: repeat(1, 1fr 5fr 1fr) / repeat(3, 1fr);
@@ -7,32 +24,32 @@
   
   height: 100vh;
   & header {
-    background: #f00;
+    background: var(--color-red);
     grid-column: 1 / 4;
   }
 
   & main {
-    background: #0f0;
+    background: var(--color-green);
     grid-column: 1 / 4;
 
     display: grid;
     grid-template: repeat(1, 1fr) / repeat(1, 1fr 4fr 1fr);
 
-    .sidebar.left {
-      background: #f00;
+    & .sidebar.left {
+      background: var(--color-red);
     }
 
-    .main-content {
-      background: #0f0;
+    & .main-content {
+      background: var(--color-green);
     }
 
-    .sidebar.right {
-      background: #00f;
+    & .sidebar.right {
+      background: var(--color-blue);
     }
   }
 
   & footer {
-    background: #00f;
+    background: var(--color-blue);
     grid-column: 1 / 4;
   }
 }
