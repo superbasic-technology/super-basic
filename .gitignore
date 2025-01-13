@@ -1,3 +1,4 @@
 node_modules
 dist
-src/*.js
+# Ignore all .js files in folder1 and its subdirectories
+src/**/*.js
