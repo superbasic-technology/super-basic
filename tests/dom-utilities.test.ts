@@ -1,6 +1,6 @@
 import { appendChildrenToParent } from "../src/utility/dom-utilities";
 
-describe("apprehendChildrenTOParent()", () => {
+describe("appendChildrenToParent()", () => {
   it("appends multiple children to the parent element", () => {
     // Create a parent element
     const parent = document.createElement("div");
