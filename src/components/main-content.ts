@@ -1,32 +1,24 @@
 import { appendChildrenToParent } from "../utility/dom-utilities";
 
 // Abstraction
-abstract class AbstractCardInfo {
-  constructor(
-    public title: string,
-    public description: string,
-  ) {}
-}
 
 interface IAppendToMainContent {
   append(...elements: HTMLElement[]): void;
 }
 
-// Concrete implementations (low-level module)
+interface IGenerateCard {
+  generate(): HTMLDivElement;
+}
 
-export class CardInfo extends AbstractCardInfo {
+// Concrete implementations
+
+export class GenerateCard implements IGenerateCard {
   constructor(
     public title: string,
     public description: string,
-  ) {
-    super(title, description);
-  }
-}
+  ) {}
 
-// High-level module
-
-export class GenerateCard {
-  generate(card: AbstractCardInfo): HTMLDivElement {
+  generate(): HTMLDivElement {
     const serviceCard = document.createElement("div");
     serviceCard.setAttribute("class", "service-card");
 
@@ -34,14 +26,20 @@ export class GenerateCard {
     const p = document.createElement("p");
     const link = document.createElement("a");
 
-    h3.textContent = `${card.title}`;
-    p.textContent = `${card.description}`;
+    h3.textContent = `${this.title}`;
+    p.textContent = `${this.description}`;
     link.textContent = `More info`;
 
     appendChildrenToParent(serviceCard, h3, p, link);
 
     return serviceCard;
   }
+}
+
+// High-level module
+
+export class GenerateCardsContainer {
+
 }
 
 export class AppendToMainContent {
@@ -55,7 +53,3 @@ export class AppendToMainContent {
     }
   }
 }
-
-export const mainContent = () => {
-  new AppendToMainContent().append(new GenerateCard().generate(new CardInfo("Sim card", "Hello, world!")));
-};
