@@ -39,7 +39,13 @@ export class GenerateCard implements IGenerateCard {
 // High-level module
 
 export class GenerateCardsContainer {
+  generate(...children: HTMLDivElement[]): HTMLDivElement {
+    const cardsContainer = document.createElement("div");
 
+    appendChildrenToParent(cardsContainer, ...children);
+
+    return cardsContainer;
+  }
 }
 
 export class AppendToMainContent {
