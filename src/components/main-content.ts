@@ -59,3 +59,7 @@ export class AppendToMainContent {
     }
   }
 }
+
+export const mainContent = () => {
+  new AppendToMainContent().append(new GenerateCardsContainer().generate(new GenerateCard("Hello", "Hello, world!").generate()));
+};
