@@ -28,3 +28,15 @@ class Menu {
     return menu;
   }
 }
+
+export class AppendToHeader {
+  append(...elements: HTMLElement[]): void {
+    const header = document.querySelector("header");
+    
+    if (!header) throw new Error(`Element does not exist`);
+
+    for (let i = 0; i < elements.length; i += 1) {
+      header.appendChild(elements[i]);
+    }
+  }
+}
