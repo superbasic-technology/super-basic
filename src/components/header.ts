@@ -49,13 +49,13 @@ class Navigation {
     const home = document.createElement("a");
     home.textContent = "Home";
 
-    const about = document.createElement("a");
-    about.textContent = "About";
-
     const contact = document.createElement("a");
     contact.textContent = "Contact";
 
-    appendChildrenToParent(ul, about, home, contact);
+    const about = document.createElement("a");
+    about.textContent = "About";
+
+    appendChildrenToParent(ul, home, contact, about);
     nav.appendChild(ul);
 
     return nav;
