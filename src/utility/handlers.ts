@@ -8,6 +8,9 @@ export const handleMenu = () => {
 };
 
 export const handleCancel = () => {
+  const menu = document.querySelector(".menu") as HTMLElement;
+  menu.style.display = "block";
+  
   const nav = document.querySelector(".nav") as HTMLElement;
   nav.style.display = "none";
 };
