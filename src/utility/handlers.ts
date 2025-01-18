@@ -1,3 +1,5 @@
 export const handleMenu = () => {
-  console.log("Hello, menu");
+  const nav = document.querySelector(".nav") as HTMLElement;
+  nav.style.display = "block";
 };
+
