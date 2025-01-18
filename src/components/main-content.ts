@@ -1,5 +1,8 @@
 import { appendChildrenToParent } from "../utility/dom-utilities";
 import coding from "../assets/images/course-image-coding.png";
+import generative_ai from "../assets/images/generative-ai.png";
+import mathematics_img from "../assets/images/arithmetics.jpg";
+import portfolio_img from "../assets/images/portfolio-image.png";
 
 // Abstraction
 
@@ -37,13 +40,9 @@ export class GenerateCard implements IGenerateCard {
     }
 
     const img = document.createElement("img");
-    img.src = `${this.image}`;
+    img.src = `${this.image}`;    
 
-    
-    // p.textContent = `${this.description}`;
-    
-
-    appendChildrenToParent(serviceCard, h3, ul, img);
+    appendChildrenToParent(serviceCard, h3, img, ul);
 
     return serviceCard;
   }
@@ -76,9 +75,9 @@ export class AppendToMainContent {
 
 export const mainContent = () => {
   new AppendToMainContent().append(new GenerateCardsContainer().generate(
-    new GenerateCard("វគ្គហ្វឹកហាត់ Web Development សម្រាប់ការហាត់ការ (Internship)", ["វគ្គនេះមានរយៈពេល១ឆ្នាំ និង ត្រូវបានបង្រៀនដោយគ្រូដែលបានរៀននៅប្រទេសអុឹរ៉ុប", "បន្ទាប់ពីបានរៀនវគ្គនេះរយៈពេល៦ខែ សិស្សនឹងទទួលបានឱកាសហាត់ការ(Internship)ចំនួន៦ខែជាមួយ Developers របស់យើងខ្ញុំផ្ទាល់", "រៀនរយៈពេល៤ម៉ោង ច័ន្ទ-សុក្រ ហើយសិស្សអាចរើសការរៀនជាក្រុម ឬ ម្នាក់ឯងបាន​", "សម្រាប់វគ្គនេះ យើងខ្ញុំទទួលតែ៥នាក់ប៉ុន្នោះក្នុង១ឆ្នាំ សូមរុះរាន់៕​"], coding).generate(),
-    new GenerateCard("វគ្គបង្រៀនប្រើប្រាស់ AI ដូចជា ChatGPT និង Gemini", ["វគ្គនេះមានរយៈពេល១​ខែ ឬ ៣០ម៉ោង ច័ន្ទ-សុក្រ ឬ សៅរ៍-អាទិត្យ ",], coding).generate(),
-    new GenerateCard("វគ្គគណិតវិទ្យាបំប៉នថ្នាក់ទី១ដល់ថ្នាក់ទី១២", ["វគ្គនេះមានរយៈពេល៤​ខែ និង ត្រូវបានបង្រៀនដោយ គ្រូដែលបានរៀននៅប្រទេសអុឹរ៉ុប", "រៀនរយៈពេល៣ម៉ោង ច័ន្ទ-សុក្រ ហើយសិស្សអាចរើសការរៀនជាក្រុម ឬ ម្នាក់ឯងបាន៕"], coding).generate(),
-    new GenerateCard("សេវាកម្មបង្កើត Portfolio", ["សម្រាប់អ្នករកការងារធ្វើនិងអ្នកដែលកំពុងមានការងារស្រាប់", "ធានាកែរលំអររយៈពេល១ឆ្នាំ", "Free ក្នុងការបង្កើត CV៕"], coding).generate(),
+    new GenerateCard("វគ្គហ្វឹកហាត់ Web Development សម្រាប់ការហាត់ការ (Internship)", ["វគ្គនេះមានរយៈពេល១ឆ្នាំ និង ត្រូវបានបង្រៀនដោយគ្រូដែលបានរៀននៅប្រទេសអុឹរ៉ុប", "បន្ទាប់ពីបានរៀនវគ្គនេះរយៈពេល៦ខែ សិស្សនឹងទទួលបានឱកាសហាត់ការ(Internship)ចំនួន៦ខែជាមួយ Developers របស់យើងខ្ញុំផ្ទាល់", "រៀនរយៈពេល៣ទៅ៤ម៉ោង ច័ន្ទ-សុក្រ ហើយសិស្សអាចរើសការរៀនជាក្រុម ឬ ម្នាក់ឯងបាន​", "សម្រាប់វគ្គនេះ យើងខ្ញុំទទួលតែ៥នាក់ប៉ុន្នោះក្នុង១ឆ្នាំ សូមចុះឈ្មោះឥលូវនេះ៕​"], coding).generate(),
+    new GenerateCard("វគ្គបង្រៀនប្រើប្រាស់ AI ដូចជា ChatGPT និង Gemini", ["វគ្គនេះសម្រាប់មនុស្សទូរទៅដែលចង់ចេះប្រើ Generative AI", "វគ្គនេះមានរយៈពេល១​ខែ ឬ ៣០ម៉ោង ច័ន្ទ-សុក្រ ឬ សៅរ៍-អាទិត្យ៕",], generative_ai).generate(),
+    new GenerateCard("វគ្គគណិតវិទ្យាបំប៉នថ្នាក់ទី១ដល់ថ្នាក់ទី១២", ["វគ្គនេះមានរយៈពេល៤​ខែ និង ត្រូវបានបង្រៀនដោយ គ្រូដែលបានរៀននៅប្រទេសអុឹរ៉ុប", "រៀនរយៈពេល៣ម៉ោង ច័ន្ទ-សុក្រ ហើយសិស្សអាចរើសការរៀនជាក្រុម ឬ ម្នាក់ឯងបាន៕"], mathematics_img).generate(),
+    new GenerateCard("សេវាកម្មបង្កើត Portfolio", ["សម្រាប់អ្នករកការងារធ្វើនិងអ្នកដែលកំពុងមានការងារស្រាប់", "ធានាកែរលំអររយៈពេល១ឆ្នាំ", "Free ក្នុងការបង្កើត CV៕"], portfolio_img).generate(),
   ));
 }
