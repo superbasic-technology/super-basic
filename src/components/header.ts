@@ -1,20 +1,30 @@
 import superbasic from "../assets/images/super-basic-technology.png";
-import menu from "../assets/images/menu.svg";
+import hamburger_menu from "../assets/images/menu.svg";
 
 
-class HeaderLeft {
-  create(): void {
-    const header = document.querySelector("header") as HTMLElement;
+class Logo {
+  create(): HTMLElement {
     const logo = document.createElement("div");
     logo.setAttribute("class", "logo");
     const img = document.createElement("img");
     img.src = `${superbasic}`;
 
     logo.appendChild(img);
-    header.appendChild(logo);
+
+    return logo;
   }
 }
 
-export const header = () => {
-  new HeaderLeft().create();
-};
+class Menu {
+  create(): HTMLElement {
+    const menu = document.createElement("div");
+    menu.setAttribute("class", "menu");
+    const img = document.createElement("img");
+    img.src = `${hamburger_menu}`;
+    img.style.width = "50px";
+    
+    menu.appendChild(img);
+
+    return menu;
+  }
+}
