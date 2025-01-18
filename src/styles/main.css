@@ -4,6 +4,8 @@
   --color-red: #f00;
   --color-green: #0f0;
   --color-blue: #00f;
+  --spacing-padding: 1rem;
+  --border-radius: 1rem;
 }
 
 *,
@@ -17,39 +19,110 @@
 
 .container {
   display: grid;
-  grid-template: repeat(1, 1fr 5fr 1fr) / repeat(3, 1fr);
+  grid-template: repeat(1, 1fr 6fr 1fr) / repeat(3, 1fr);
   grid-template-areas:  "header header header"
                         "sidebar-left main-content sidebar-right"
-                        "footer footer footer";
-  
+                        "footer footer footer";  
   height: 100vh;
-  & header {
-    background: var(--color-red);
-    grid-column: 1 / 4;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+& header {
+  background: var(--color-red);
+  grid-column: 1 / 4;
+  padding: var(--spacing-padding);
+}
+
+main {
+  background: var(--color-green);
+  grid-column: 1 / 4;
+  height: auto;
+  overflow: auto;
+  display: grid;
+  grid-template: repeat(1, 1fr) / repeat(1, 1fr 4fr 1fr);
+
+  & .sidebar.left {
+    background: #1992d4;
+    padding: var(--spacing-padding);
   }
 
-  & main {
-    background: var(--color-green);
-    grid-column: 1 / 4;
+  & .main-content {
+    background: #e2e8f0;
+    padding: var(--spacing-padding);
+  }
 
+  & .main-content > h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  & .sidebar.right {
+    background: #e2e8f0;
+    padding: var(--spacing-padding);
+  }
+
+  & img {
+    width: 20vw;
+    height: 20vh;
+  }
+
+  & .cards-container {
     display: grid;
-    grid-template: repeat(1, 1fr) / repeat(1, 1fr 4fr 1fr);
-
-    & .sidebar.left {
-      background: var(--color-red);
-    }
-
-    & .main-content {
-      background: var(--color-green);
-    }
-
-    & .sidebar.right {
-      background: var(--color-blue);
-    }
+    grid-template-columns: repeat(1, clamp(360px, 20vw, 25vw));
+    gap: 1rem;
   }
 
-  & footer {
-    background: var(--color-blue);
-    grid-column: 1 / 4;
+  & .service-card {
+    border: none solid #000;
+    padding: var(--spacing-padding);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  & .service-card img {
+    width: 80%;
+  }
+
+  & .service-card ul {
+    margin-left: 1rem;
+  }
+}
+
+footer {
+  background: var(--color-blue);
+  grid-column: 1 / 4;
+  padding: var(--spacing-padding);
+}
+
+/* Target iPhone screen sizes */
+@media screen and (max-width: 600px) { /* Covers most iPhones */
+  main {
+    overflow-x: hidden;
+  }
+
+  .main-content {
+    overflow-x: none;
+  }
+
+  .main-content > h2 {
+    width: 80%;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .service-card {
+      width: 80%;
+  }
+
+  .sidebar.left, .sidebar.right {
+    display: none;
   }
 }
