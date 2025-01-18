@@ -4,3 +4,9 @@ export const appendChildrenToParent: AppendChildrenToParent = (parent, ...childr
     parent.appendChild(children[i]);
   }
 };
+
+export const clearMainContent = () => {
+  const mainContent = document.querySelector(".main-content") as HTMLElement;
+
+  mainContent.remove();
+};
