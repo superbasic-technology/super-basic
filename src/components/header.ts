@@ -40,3 +40,10 @@ export class AppendToHeader {
     }
   }
 }
+
+export const header = () => {
+  new AppendToHeader().append(
+    new Logo().create(),
+    new Menu().create(),
+  );
+};
