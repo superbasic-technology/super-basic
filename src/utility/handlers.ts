@@ -3,3 +3,8 @@ export const handleMenu = () => {
   nav.style.display = "block";
 };
 
+export const handleCancel = () => {
+  const nav = document.querySelector(".nav") as HTMLElement;
+  nav.style.display = "none";
+};
+
