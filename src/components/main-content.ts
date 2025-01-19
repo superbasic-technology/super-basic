@@ -3,6 +3,7 @@ import coding from "../assets/images/course-image-coding.png";
 import generative_ai from "../assets/images/generative-ai.png";
 import mathematics_img from "../assets/images/arithmetics.jpg";
 import portfolio_img from "../assets/images/portfolio-image.png";
+import { Contact } from "./contact";
 
 // Abstraction
 
@@ -79,5 +80,7 @@ export const mainContent = () => {
     new GenerateCard("វគ្គបង្រៀនប្រើប្រាស់ AI ដូចជា ChatGPT និង Gemini", ["វគ្គនេះសម្រាប់មនុស្សទូរទៅដែលចង់ចេះប្រើ Generative AI", "វគ្គនេះមានរយៈពេល១​ខែ ឬ ៣០ម៉ោង", "ក្នុង១ថ្ងៃរៀនរយៈពេល១ម៉ោង ច័ន្ទ-សុក្រ៕"], generative_ai).generate(),
     new GenerateCard("វគ្គគណិតវិទ្យាបំប៉នថ្នាក់ទី១ដល់ថ្នាក់ទី១២", ["វគ្គនេះមានរយៈពេល៣ខែ និង ត្រូវបានបង្រៀនដោយ គ្រូដែលបានរៀននៅប្រទេសអុឹរ៉ុប", "ក្នុង១ថ្ងៃរៀនរយៈពេល៣ម៉ោង ច័ន្ទ-សុក្រ ហើយសិស្សអាចរើសការរៀនជាក្រុម ឬ ម្នាក់ឯងបាន៕"], mathematics_img).generate(),
     new GenerateCard("សេវាកម្មបង្កើត Portfolio", ["សម្រាប់អ្នករកការងារធ្វើនិងអ្នកដែលកំពុងមានការងារស្រាប់", "ធានាកែរលំអររយៈពេល១ឆ្នាំ", "Free ក្នុងការបង្កើត CV៕"], portfolio_img).generate(),
-  ));
+  ),
+  new Contact().create(),
+);
 }
