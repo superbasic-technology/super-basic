@@ -1,3 +1,5 @@
+import { hideServices } from "./dom-utilities";
+
 export const handleMenu = () => {
   const menu = document.querySelector(".menu") as HTMLElement;
   menu.style.display = "none";
@@ -10,8 +12,12 @@ export const handleMenu = () => {
 export const handleCancel = () => {
   const menu = document.querySelector(".menu") as HTMLElement;
   menu.style.display = "block";
-  
+
   const nav = document.querySelector(".nav") as HTMLElement;
   nav.style.display = "none";
+};
+
+export const handleContact = () => {
+  hideServices();
 };
 
