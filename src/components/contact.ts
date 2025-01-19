@@ -6,7 +6,7 @@ export class Contact {
     contact.setAttribute("class", "contact");
 
     const contactMethodsHeader = document.createElement("h2");
-    contactMethodsHeader.textContent = "វិធីផ្សេងៗដើម្បីទាក់ទងមកយើងខ្ញុំ";
+    contactMethodsHeader.textContent = "ទាក់ទងមកយើងខ្ញុំតាមរយៈ";
 
     const contactMethodsContainer = document.createElement("div");
     contactMethodsContainer.setAttribute("class", "contact-methods-container");
