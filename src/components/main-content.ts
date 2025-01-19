@@ -53,12 +53,15 @@ export class GenerateCard implements IGenerateCard {
 
 export class GenerateCardsContainer {
   generate(...children: HTMLDivElement[]): HTMLDivElement {
+    const services = document.createElement("div");
+    services.setAttribute("class", "services");
     const cardsContainer = document.createElement("div");
     cardsContainer.setAttribute("class", "cards-container");
 
     appendChildrenToParent(cardsContainer, ...children);
+    services.appendChild(cardsContainer)
 
-    return cardsContainer;
+    return services;
   }
 }
 
