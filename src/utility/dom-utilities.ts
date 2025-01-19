@@ -6,8 +6,8 @@ export const appendChildrenToParent: AppendChildrenToParent = (parent, ...childr
 }
 
 export const hideServices = () => {
-  const cardsContainer = document.querySelector(".cards-container") as HTMLElement;  
-  cardsContainer.style.display = "none";
+  const services = document.querySelector(".services") as HTMLElement;  
+  services.style.display = "none";
 
   const servicesHeader = document.querySelector(".main-content > h2") as HTMLElement;
   servicesHeader.style.display = "none";
