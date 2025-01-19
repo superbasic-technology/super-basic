@@ -1,7 +1,7 @@
 import "./styles/main.css"
 import { mainContent } from "./components/main-content";
 import { header } from "./components/header";
-import { handleMenu, handleCancel } from "./utility/handlers";
+import { handleMenu, handleCancel, handleContact } from "./utility/handlers";
 
 const main = () => {
   mainContent();
@@ -14,6 +14,9 @@ const applyHandlers = () => {
 
   const cancel = document.querySelector(".cancel") as HTMLElement;
   cancel.addEventListener("click", handleCancel);
+
+  const contact = document.querySelector(".nav a:nth-child(2)") as HTMLElement;
+  contact.addEventListener("click", handleContact);
 };
 
 main();
