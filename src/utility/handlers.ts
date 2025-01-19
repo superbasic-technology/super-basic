@@ -19,6 +19,9 @@ export const handleCancel = () => {
 
 export const handleContact = () => {
   hideServices();
+
+  const contact = document.querySelector(".contact") as HTMLElement;
+  contact.style.display = "block";
 };
 
 export const handleHome = () => {
