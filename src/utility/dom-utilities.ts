@@ -12,3 +12,8 @@ export const hideServices = () => {
   const servicesHeader = document.querySelector(".main-content > h2") as HTMLElement;
   servicesHeader.style.display = "none";
 };
+
+export const hideContact = () => {
+  const contact = document.querySelector(".contact") as HTMLElement;
+  contact.style.display = "none";
+};
