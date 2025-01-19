@@ -14,6 +14,6 @@ export const hideServices = () => {
 };
 
 export const hideContact = () => {
-  const contact = document.querySelector(".contact") as HTMLElement;
+  const contact = document.querySelector(".main-content .contact") as HTMLElement;
   contact.style.display = "none";
 };

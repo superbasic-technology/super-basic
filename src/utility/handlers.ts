@@ -30,4 +30,6 @@ export const handleHome = () => {
 
   const servicesHeader = document.querySelector(".main-content > h2") as HTMLElement;
   servicesHeader.style.display = "block";
+
+  hideContact();
 };
