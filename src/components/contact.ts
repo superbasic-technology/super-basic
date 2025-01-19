@@ -20,9 +20,9 @@ export class Contact {
     
     const contactDetails = [
       "+855 92 695 541",
+      "superbasic.technology@gmail.com",
       "https://web.facebook.com/profile.php?id=61571511628571",
-      "https://www.tiktok.com/@superbasic",
-      "superbasic.technology@gmail.com"
+      "https://www.tiktok.com/@superbasic"   
     ];
 
     for (let i = 0; i < contactMethods.length; i += 1) {
@@ -30,11 +30,11 @@ export class Contact {
       link.setAttribute("class", "link");
 
       switch (i) {
-        case 2: link.href = `${i}`;
+        case 2: link.href = `${contactDetails[i]}`;
                 link.rel = "noopener noreferrer";
                 link.target = "_blank";
                 break;
-        case 3: link.href = `${i}`;
+        case 3: link.href = `${contactDetails[i]}`;
         link.rel = "noopener noreferrer";
         link.target = "_blank";
                 break;
