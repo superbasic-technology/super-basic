@@ -1,7 +1,7 @@
 import "./styles/main.css"
 import { mainContent } from "./components/main-content";
 import { header } from "./components/header";
-import { handleMenu, handleCancel, handleContact, handleHome } from "./utility/handlers";
+import { handleMenu, handleCancel, handleContact, handleHome, handleAbout } from "./utility/handlers";
 
 export const main = () => {
   mainContent();
@@ -20,6 +20,10 @@ export const applyHandlers = () => {
 
   const home = document.querySelector(".nav a:nth-child(1)") as HTMLElement;
   home.addEventListener("click", handleHome);
+
+
+  const about = document.querySelector(".nav a:nth-child(3)") as HTMLElement;
+  about.addEventListener("click", handleAbout);
 };
 
 main();
