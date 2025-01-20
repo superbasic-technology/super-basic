@@ -22,3 +22,8 @@ export const hideAbout = () => {
   const about = document.querySelector(".main-content .about") as HTMLElement;
   about.style.display = "none";
 };
+
+export const hideMainContent = () => {
+  const mainContent = document.querySelector(".main-content") as HTMLElement;
+  mainContent.style.display = "none";
+};

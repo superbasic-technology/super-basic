@@ -47,15 +47,18 @@ class Navigation {
 
     const ul = document.createElement("ul");
     const home = document.createElement("a");
-    home.textContent = "Home";
+    home.textContent = "ទំព័រដើម";
 
     const contact = document.createElement("a");
-    contact.textContent = "Contact";
+    contact.textContent = "ទំនាក់ទំនង";
 
     const about = document.createElement("a");
-    about.textContent = "About";
+    about.textContent = "អំពីយើង";
 
-    appendChildrenToParent(ul, home, contact, about);
+    const news = document.createElement("a");
+    news.textContent = "ពត៌មាន";
+
+    appendChildrenToParent(ul, home, contact, about, news,);
     nav.appendChild(ul);
 
     return nav;
