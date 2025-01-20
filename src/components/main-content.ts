@@ -4,6 +4,7 @@ import generative_ai from "../assets/images/generative-ai.png";
 import mathematics_img from "../assets/images/arithmetics.jpg";
 import portfolio_img from "../assets/images/portfolio-image.png";
 import { Contact } from "./contact";
+import { About } from "./about";
 
 // Abstraction
 
@@ -85,5 +86,6 @@ export const mainContent = () => {
     new GenerateCard("សេវាកម្មបង្កើត Portfolio", ["សម្រាប់អ្នករកការងារធ្វើនិងអ្នកដែលកំពុងមានការងារស្រាប់", "ធានាកែរលំអររយៈពេល១ឆ្នាំ", "Free ក្នុងការបង្កើត CV៕"], portfolio_img).generate(),
   ),
   new Contact().create(),
+  new About().create(),
 );
 }
