@@ -85,7 +85,6 @@ export class About {
     `;
     appendChildrenToParent(conclusion, conclusion_para);
 
-
     appendChildrenToParent(courses, courses_h2, web_development, generative_ai, mathematics, portfolio, conclusion);
 
     appendChildrenToParent(about, h2, intro, mission, courses);

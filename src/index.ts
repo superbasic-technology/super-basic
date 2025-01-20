@@ -1,11 +1,13 @@
 import "./styles/main.css"
 import { mainContent } from "./components/main-content";
 import { header } from "./components/header";
+import { rightSidebar } from "./components/right-sidebar";
 import { handleMenu, handleCancel, handleContact, handleHome, handleAbout } from "./utility/handlers";
 
 export const main = () => {
   mainContent();
   header();
+  rightSidebar();
 };
 
 export const applyHandlers = () => {
