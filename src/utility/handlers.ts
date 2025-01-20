@@ -1,4 +1,4 @@
-import { hideServices, hideContact, hideAbout } from "./dom-utilities";
+import { hideServices, hideContact, hideAbout, hideMainContent } from "./dom-utilities";
 
 export const handleMenu = () => {
   const menu = document.querySelector(".menu") as HTMLElement;
@@ -48,9 +48,17 @@ export const handleAbout = () => {
 };
 
 export const handleNavigationAtSmallScreen = () => {
-  const nav = document.querySelector(".nav") as HTMLElement;
-
   if (window.innerWidth < 600) {
     handleCancel();
+  }
+};
+
+export const handleNews = () => {
+  if (window.innerWidth < 600) {
+    hideMainContent();
+    handleNavigationAtSmallScreen();
+
+    const rightSidebar = document.querySelector(".sidebar.right") as HTMLElement;
+    rightSidebar.style.display = "block";
   }
 };
