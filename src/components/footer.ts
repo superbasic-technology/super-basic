@@ -22,19 +22,26 @@ class SocialMedias {
   }
 }
 
+class Copyright {
+  create(): HTMLElement {
+    const copyright = document.createElement("div");
+    copyright.setAttribute("class", "copyright");
+  
+    const copyright_info = document.createElement("small");
+    copyright_info.textContent = "© 2025 Super Basic. All rights reserved.";
+  
+    appendChildrenToParent(copyright, copyright_info);
+
+    return copyright;
+  }
+}
+
 export const footer = () => {
   const footer = document.querySelector("footer") as HTMLElement;
-  const copyright = document.createElement("div");
-  copyright.setAttribute("class", "copyright");
-
-  const copyright_info = document.createElement("small");
-  copyright_info.textContent = "© 2025 Super Basic. All rights reserved.";
-
-  appendChildrenToParent(copyright, copyright_info);
 
   appendChildrenToParent(
     footer, 
     new SocialMedias().create(),
-    copyright,
+    new Copyright().create(),
   );
 };
