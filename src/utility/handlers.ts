@@ -20,6 +20,7 @@ export const handleCancel = () => {
 export const handleContact = () => {
   hideServices();
   hideAbout();
+  handleNavigationAtSmallScreen();
 
   const contact = document.querySelector(".contact") as HTMLElement;
   contact.style.display = "block";
@@ -28,6 +29,7 @@ export const handleContact = () => {
 export const handleHome = () => {
   hideContact();
   hideAbout();
+  handleNavigationAtSmallScreen();
 
   const services = document.querySelector(".services") as HTMLElement;  
   services.style.display = "block";
@@ -39,6 +41,7 @@ export const handleHome = () => {
 export const handleAbout = () => {
   hideServices();
   hideContact();
+  handleNavigationAtSmallScreen();
 
   const About = document.querySelector(".about") as HTMLElement;
   About.style.display = "block";
