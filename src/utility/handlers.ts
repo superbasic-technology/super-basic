@@ -19,20 +19,22 @@ export const handleCancel = () => {
 
 export const handleContact = () => {
   hideServices();
+  hideAbout();
 
   const contact = document.querySelector(".contact") as HTMLElement;
   contact.style.display = "block";
 };
 
 export const handleHome = () => {
+
+  hideContact();
+  hideAbout();
+
   const services = document.querySelector(".services") as HTMLElement;  
   services.style.display = "block";
 
   const servicesHeader = document.querySelector(".main-content > h2") as HTMLElement;
   servicesHeader.style.display = "block";
-
-  hideContact();
-  hideAbout();
 };
 
 export const handleAbout = () => {
