@@ -27,7 +27,7 @@ export const handleContact = () => {
     hideRightSidebar();
   } 
 
-  const contact = document.querySelector(".contact") as HTMLElement;
+  const contact = document.querySelector("main .contact") as HTMLElement;
   contact.style.display = "block";
 };
 
@@ -41,7 +41,7 @@ export const handleHome = () => {
     hideRightSidebar();
   } 
 
-  const services = document.querySelector(".services") as HTMLElement;  
+  const services = document.querySelector("main .services") as HTMLElement;  
   services.style.display = "block";
 
   const servicesHeader = document.querySelector(".main-content > h2") as HTMLElement;
@@ -58,7 +58,7 @@ export const handleAbout = () => {
     hideRightSidebar();
   } 
 
-  const About = document.querySelector(".about") as HTMLElement;
+  const About = document.querySelector("main .about") as HTMLElement;
   About.style.display = "block";
 };
 
