@@ -26,7 +26,6 @@ export const handleContact = () => {
 };
 
 export const handleHome = () => {
-
   hideContact();
   hideAbout();
 
@@ -43,4 +42,12 @@ export const handleAbout = () => {
 
   const About = document.querySelector(".about") as HTMLElement;
   About.style.display = "block";
+};
+
+export const handleNavigationAtSmallScreen = () => {
+  const nav = document.querySelector(".nav") as HTMLElement;
+
+  if (window.innerWidth < 600) {
+    handleCancel();
+  }
 };
