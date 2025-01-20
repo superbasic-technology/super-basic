@@ -24,6 +24,9 @@ export const applyHandlers = () => {
 
   const about = document.querySelector(".nav a:nth-child(3)") as HTMLElement;
   about.addEventListener("click", handleAbout);
+
+  const logo = document.querySelector("header .logo") as HTMLElement;
+  logo.addEventListener("click", handleHome);
 };
 
 main();
