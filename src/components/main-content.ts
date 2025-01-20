@@ -8,10 +8,6 @@ import { About } from "./about";
 
 // Abstraction
 
-interface IAppendToMainContent {
-  append(...elements: HTMLElement[]): void;
-}
-
 interface IGenerateCard {
   generate(): HTMLDivElement;
 }
