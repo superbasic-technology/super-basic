@@ -4,12 +4,14 @@ import { header } from "./components/header";
 import { rightSidebar } from "./components/right-sidebar";
 import { leftSidebar } from "./components/left-sidebar"; 
 import { handleMenu, handleCancel, handleContact, handleHome, handleAbout } from "./utility/handlers";
+import { footer } from "./components/footer";
 
 export const main = () => {
   mainContent();
   header();
   rightSidebar();
   leftSidebar();
+  footer();
 };
 
 export const applyHandlers = () => {
