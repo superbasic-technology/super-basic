@@ -18,11 +18,11 @@ class Internship {
 export const rightSidebar = () => {
   const right_sidebar = document.querySelector(".sidebar.right") as HTMLElement;
   const right_sidebar_h3 = document.createElement("h3");
-  right_sidebar_h3.textContent = "News";
+  right_sidebar_h3.textContent = "ពត៌មាន";
 
   appendChildrenToParent(
     right_sidebar,
     right_sidebar_h3,
     new Internship().create(),
-    );
+  );
 };

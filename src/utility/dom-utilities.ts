@@ -27,3 +27,8 @@ export const hideMainContent = () => {
   const mainContent = document.querySelector(".main-content") as HTMLElement;
   mainContent.style.display = "none";
 };
+
+export const showMainContent = () => {
+  const mainContent = document.querySelector(".main-content") as HTMLElement;
+  mainContent.style.display = "block";
+};
