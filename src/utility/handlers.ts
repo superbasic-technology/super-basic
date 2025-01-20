@@ -1,4 +1,4 @@
-import { hideServices, hideContact, hideAbout, hideMainContent } from "./dom-utilities";
+import { hideServices, hideContact, hideAbout, hideMainContent, showMainContent } from "./dom-utilities";
 
 export const handleMenu = () => {
   const menu = document.querySelector(".menu") as HTMLElement;
@@ -21,6 +21,7 @@ export const handleContact = () => {
   hideServices();
   hideAbout();
   handleNavigationAtSmallScreen();
+  showMainContent();
 
   const contact = document.querySelector(".contact") as HTMLElement;
   contact.style.display = "block";
@@ -30,6 +31,7 @@ export const handleHome = () => {
   hideContact();
   hideAbout();
   handleNavigationAtSmallScreen();
+  showMainContent();
 
   const services = document.querySelector(".services") as HTMLElement;  
   services.style.display = "block";
@@ -42,6 +44,7 @@ export const handleAbout = () => {
   hideServices();
   hideContact();
   handleNavigationAtSmallScreen();
+  showMainContent();
 
   const About = document.querySelector(".about") as HTMLElement;
   About.style.display = "block";
