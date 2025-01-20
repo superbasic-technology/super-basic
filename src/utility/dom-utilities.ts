@@ -17,3 +17,8 @@ export const hideContact = () => {
   const contact = document.querySelector(".main-content .contact") as HTMLElement;
   contact.style.display = "none";
 };
+
+export const hideAbout = () => {
+  const about = document.querySelector(".main-content .about") as HTMLElement;
+  about.style.display = "none";
+};
