@@ -32,6 +32,7 @@ export const handleHome = () => {
   servicesHeader.style.display = "block";
 
   hideContact();
+  hideAbout();
 };
 
 export const handleAbout = () => {
