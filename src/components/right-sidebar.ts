@@ -3,8 +3,9 @@ import { appendChildrenToParent } from "../utility/dom-utilities";
 class Internship {
   create(): HTMLElement {
     const internship = document.createElement("div");
+    internship.setAttribute("class", "internship");
     const internship_para = document.createElement("p");
-    internship_para.setAttribute("class", "internship");
+    
     internship_para.textContent = `
        យើងខ្ញុំកំពុងត្រូវការអ្នកហាត់ការ (interns) ផ្នែក Frontend Development ចំនួន៥រូប។ សូមផ្ញើ CV ឬ ទាក់ទងមក Telegram ឬ facebook page របស់យើងខ្ញុំសម្រាប់ពត៌មានលម្អិត។
     `;
