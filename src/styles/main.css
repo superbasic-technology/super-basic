@@ -260,6 +260,10 @@ footer {
       width: 40px;
       justify-self: flex-end;
     }
+
+    & .menu {
+      display: block;
+    }
   }
 
   main {
