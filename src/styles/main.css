@@ -212,7 +212,7 @@ footer {
 }
 
 /* Target iPhone screen sizes */
-@media screen and (max-width: 828px) { /* Covers most iPhones */
+@media screen and (max-width: 768px) { /* Covers most iPhones */
 
   header {
     position: relative;
@@ -263,7 +263,6 @@ footer {
 
     & .hamburger-menu {
       display: block;
-      background: #f00;
     }
   }
 
