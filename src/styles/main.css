@@ -51,7 +51,7 @@
     cursor: pointer;
   }
 
-  & .menu {
+  & .hamburger-menu {
     display: none;
   }
 
@@ -226,7 +226,7 @@ footer {
       height: auto;
     }
 
-    & .menu {
+    & .hamburger-menu {
       display: block;
     }
 
@@ -261,8 +261,9 @@ footer {
       justify-self: flex-end;
     }
 
-    & .menu {
+    & .hamburger-menu {
       display: block;
+      background: #f00;
     }
   }
 

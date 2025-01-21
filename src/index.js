@@ -17,8 +17,8 @@ const main = () => {
 };
 exports.main = main;
 const applyHandlers = () => {
-    const menu = document.querySelector(".menu");
-    menu.addEventListener("click", handlers_1.handleMenu);
+    const hamburger_menu = document.querySelector(".hamburger-menu");
+    hamburger_menu.addEventListener("click", handlers_1.handleHamburgerMenu);
     const cancel = document.querySelector(".cancel");
     cancel.addEventListener("click", handlers_1.handleCancel);
     const contact = document.querySelector(".nav a:nth-child(2)");

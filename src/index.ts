@@ -3,7 +3,7 @@ import { mainContent } from "./components/main-content";
 import { header } from "./components/header";
 import { rightSidebar } from "./components/right-sidebar";
 import { leftSidebar } from "./components/left-sidebar"; 
-import { handleMenu, handleCancel, handleContact, handleHome, handleAbout, handleNews } from "./utility/handlers";
+import { handleHamburgerMenu, handleCancel, handleContact, handleHome, handleAbout, handleNews } from "./utility/handlers";
 import { footer } from "./components/footer";
 
 export const main = () => {
@@ -15,8 +15,8 @@ export const main = () => {
 };
 
 export const applyHandlers = () => {
-  const menu = document.querySelector(".menu") as HTMLElement;
-  menu.addEventListener("click", handleMenu);
+  const hamburger_menu = document.querySelector(".hamburger-menu") as HTMLElement;
+  hamburger_menu.addEventListener("click", handleHamburgerMenu);
 
   const cancel = document.querySelector(".cancel") as HTMLElement;
   cancel.addEventListener("click", handleCancel);
@@ -26,7 +26,6 @@ export const applyHandlers = () => {
 
   const home = document.querySelector(".nav a:nth-child(1)") as HTMLElement;
   home.addEventListener("click", handleHome);
-
 
   const about = document.querySelector(".nav a:nth-child(3)") as HTMLElement;
   about.addEventListener("click", handleAbout);
