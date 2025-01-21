@@ -17,17 +17,17 @@ class Logo {
   }
 }
 
-class Menu {
+class HamburgerMenu {
   create(): HTMLElement {
-    const menu = document.createElement("div");
-    menu.setAttribute("class", "menu");
+    const hamburgerMenu = document.createElement("div");
+    hamburgerMenu.setAttribute("class", "hamburger-menu");
     const img = document.createElement("img");
     img.src = `${hamburger_menu}`;
     img.style.width = "50px";
     
-    menu.appendChild(img);
+    hamburgerMenu.appendChild(img);
 
-    return menu;
+    return hamburgerMenu;
   }
 }
 
@@ -84,7 +84,7 @@ export class AppendToHeader {
 export const header = () => {
   new AppendToHeader().append(
     new Logo().create(),
-    new Menu().create(),
+    new HamburgerMenu().create(),
     new Navigation().create(),
   );
 };

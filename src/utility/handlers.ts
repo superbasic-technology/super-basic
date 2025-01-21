@@ -1,7 +1,7 @@
 import { hideServices, hideContact, hideAbout, hideMainContent, showMainContent, hideRightSidebar } from "./dom-utilities";
 
-export const handleMenu = () => {
-  const menu = document.querySelector(".menu") as HTMLElement;
+export const handleHamburgerMenu = () => {
+  const menu = document.querySelector(".hamburger-menu") as HTMLElement;
   menu.style.display = "none";
 
   const nav = document.querySelector(".nav") as HTMLElement;
@@ -10,7 +10,7 @@ export const handleMenu = () => {
 };
 
 export const handleCancel = () => {
-  const menu = document.querySelector(".menu") as HTMLElement;
+  const menu = document.querySelector(".hamburger-menu") as HTMLElement;
   menu.style.display = "block";
 
   const nav = document.querySelector(".nav") as HTMLElement;
