@@ -1,31 +1,27 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.applyHandlers = exports.main = void 0;
+exports.applyHandlers = exports.app = void 0;
 require("./styles/main.css");
-const main_content_1 = require("./components/main-content");
 const header_1 = require("./components/header");
-const right_sidebar_1 = require("./components/right-sidebar");
-const left_sidebar_1 = require("./components/left-sidebar");
 const handlers_1 = require("./utility/handlers");
 const footer_1 = require("./components/footer");
-const main = () => {
-    (0, main_content_1.mainContent)();
+const main_1 = require("./components/main");
+const app = () => {
     (0, header_1.header)();
-    (0, right_sidebar_1.rightSidebar)();
-    (0, left_sidebar_1.leftSidebar)();
+    (0, main_1.main)();
     (0, footer_1.footer)();
 };
-exports.main = main;
+exports.app = app;
 const applyHandlers = () => {
     const hamburger_menu = document.querySelector(".hamburger-menu");
     hamburger_menu.addEventListener("click", handlers_1.handleHamburgerMenu);
     const cancel = document.querySelector(".cancel");
     cancel.addEventListener("click", handlers_1.handleCancel);
-    const contact = document.querySelector(".nav a:nth-child(2)");
+    const contact = document.querySelector("ul .contact");
     contact.addEventListener("click", handlers_1.handleContact);
-    const home = document.querySelector(".nav a:nth-child(1)");
+    const home = document.querySelector("ul .home");
     home.addEventListener("click", handlers_1.handleHome);
-    const about = document.querySelector(".nav a:nth-child(3)");
+    const about = document.querySelector("ul .about");
     about.addEventListener("click", handlers_1.handleAbout);
     const logo = document.querySelector("header .logo");
     logo.addEventListener("click", handlers_1.handleHome);
@@ -33,5 +29,5 @@ const applyHandlers = () => {
     news.addEventListener("click", handlers_1.handleNews);
 };
 exports.applyHandlers = applyHandlers;
-(0, exports.main)();
+(0, exports.app)();
 (0, exports.applyHandlers)();

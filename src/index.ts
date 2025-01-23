@@ -1,16 +1,12 @@
 import "./styles/main.css"
-import { mainContent } from "./components/main-content";
 import { header } from "./components/header";
-import { rightSidebar } from "./components/right-sidebar";
-import { leftSidebar } from "./components/left-sidebar"; 
 import { handleHamburgerMenu, handleCancel, handleContact, handleHome, handleAbout, handleNews } from "./utility/handlers";
 import { footer } from "./components/footer";
+import { main } from "./components/main";
 
-export const main = () => {
-  mainContent();
+export const app = () => {
   header();
-  rightSidebar();
-  leftSidebar();
+  main(); 
   footer();
 };
 
@@ -21,13 +17,13 @@ export const applyHandlers = () => {
   const cancel = document.querySelector(".cancel") as HTMLElement;
   cancel.addEventListener("click", handleCancel);
 
-  const contact = document.querySelector(".nav a:nth-child(2)") as HTMLElement;
+  const contact = document.querySelector("ul .contact") as HTMLElement;
   contact.addEventListener("click", handleContact);
 
-  const home = document.querySelector(".nav a:nth-child(1)") as HTMLElement;
+  const home = document.querySelector("ul .home") as HTMLElement;
   home.addEventListener("click", handleHome);
 
-  const about = document.querySelector(".nav a:nth-child(3)") as HTMLElement;
+  const about = document.querySelector("ul .about") as HTMLElement;
   about.addEventListener("click", handleAbout);
 
   const logo = document.querySelector("header .logo") as HTMLElement;
@@ -37,5 +33,5 @@ export const applyHandlers = () => {
   news.addEventListener("click", handleNews);
 };
 
-main();
+app();
 applyHandlers();
