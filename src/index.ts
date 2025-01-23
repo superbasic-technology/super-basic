@@ -20,7 +20,7 @@ export const applyHandlers = () => {
   const contact = document.querySelector("ul .contact") as HTMLElement;
   contact.addEventListener("click", handleContact);
 
-  const home = document.querySelector(".nav a:nth-child(1)") as HTMLElement;
+  const home = document.querySelector("ul .home") as HTMLElement;
   home.addEventListener("click", handleHome);
 
   const about = document.querySelector(".nav a:nth-child(3)") as HTMLElement;

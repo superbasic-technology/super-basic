@@ -23,20 +23,7 @@ export const handleContact = () => {
 };
 
 export const handleHome = () => {
-  hideContact();
-  hideAbout();
-  handleNavigationAtSmallScreen();
-  showMainContent();
-
-  if (window.innerWidth < 600) {
-    hideRightSidebar();
-  } 
-
-  const services = document.querySelector("main .services") as HTMLElement;  
-  services.style.display = "block";
-
-  const servicesHeader = document.querySelector(".main-content > h2") as HTMLElement;
-  servicesHeader.style.display = "block";
+  location.reload();
 };
 
 export const handleAbout = () => {
