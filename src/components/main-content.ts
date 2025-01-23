@@ -3,9 +3,6 @@ import coding from "../assets/images/course-image-coding.png";
 import generative_ai from "../assets/images/generative-ai.png";
 import mathematics_img from "../assets/images/arithmetics.jpg";
 import portfolio_img from "../assets/images/portfolio-image.png";
-import { Contact } from "./contact";
-import { About } from "./about";
-import { main } from "./main";
 
 interface IGenerateCard {
   generate(): HTMLDivElement;
@@ -70,11 +67,23 @@ export class GenerateCardsContainer {
   generate(...children: HTMLDivElement[]): HTMLDivElement {
     const services = document.createElement("div");
     services.setAttribute("class", "services");
-    const cardsContainer = document.createElement("div");
-    cardsContainer.setAttribute("class", "cards-container");
 
-    appendChildrenToParent(cardsContainer, ...children);
-    services.appendChild(cardsContainer)
+    const services_h2 = document.createElement("h2");
+    services_h2.textContent = "សេវាកម្ម"
+
+    const servicesContainer = document.createElement("div");
+    servicesContainer.setAttribute("class", "services-container");
+
+    appendChildrenToParent(
+      servicesContainer,
+      ...children
+    );
+    
+    appendChildrenToParent(
+      services,
+      services_h2,
+      servicesContainer
+    );
 
     return services;
   }

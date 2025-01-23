@@ -5,13 +5,9 @@ export class RightSidebar {
     const right_sidebar = document.createElement("div");
     right_sidebar.setAttribute("class", "sidebar right");
 
-    const right_sidebar_h3 = document.createElement("h3");
-    right_sidebar_h3.textContent = "ពត៌មាន";
-
     appendChildrenToParent(
       right_sidebar,
-      right_sidebar_h3,
-      new Internship().create(),
+      new News().create(),
     );
 
     return right_sidebar;
@@ -30,5 +26,23 @@ class Internship {
     internship.appendChild(internship_para);
 
     return internship;
+  }
+}
+
+class News {
+  create(): HTMLElement {
+    const news = document.createElement("div");
+    news.setAttribute("class", "news");
+
+    const right_sidebar_h3 = document.createElement("h3");
+    right_sidebar_h3.textContent = "ពត៌មាន";
+
+    appendChildrenToParent(
+      news,
+      right_sidebar_h3,
+      new Internship().create(),
+    );
+
+    return news;
   }
 }
