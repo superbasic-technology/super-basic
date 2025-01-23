@@ -49,10 +49,12 @@ class GenerateCardsContainer {
     generate(...children) {
         const services = document.createElement("div");
         services.setAttribute("class", "services");
-        const cardsContainer = document.createElement("div");
-        cardsContainer.setAttribute("class", "cards-container");
-        (0, dom_utilities_1.appendChildrenToParent)(cardsContainer, ...children);
-        services.appendChild(cardsContainer);
+        const services_h2 = document.createElement("h2");
+        services_h2.textContent = "សេវាកម្ម";
+        const servicesContainer = document.createElement("div");
+        servicesContainer.setAttribute("class", "services-container");
+        (0, dom_utilities_1.appendChildrenToParent)(servicesContainer, ...children);
+        (0, dom_utilities_1.appendChildrenToParent)(services, services_h2, servicesContainer);
         return services;
     }
 }
