@@ -45,7 +45,7 @@ export const showMainContent = () => {
 
 export const showContact = () => {
   const contact = document.querySelector("main .contact") as HTMLElement;
-  contact.style.display = "block";
+  contact.style.display = `flex`;
 };
 
 export const appendToMain = (...elements: HTMLElement[]) => {

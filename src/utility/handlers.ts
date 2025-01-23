@@ -1,4 +1,4 @@
-import { hideServices, hideContact, hideAbout, hideMainContent, showMainContent, hideRightSidebar } from "./dom-utilities";
+import { hideServices, hideContact, hideAbout, hideMainContent, showMainContent, hideRightSidebar, hideHome, showContact } from "./dom-utilities";
 
 export const handleHamburgerMenu = () => {
   const menu = document.querySelector(".hamburger-menu") as HTMLElement;
@@ -18,17 +18,8 @@ export const handleCancel = () => {
 };
 
 export const handleContact = () => {
-  hideServices();
-  hideAbout();
-  handleNavigationAtSmallScreen();
-  showMainContent();
-  
-  if (window.innerWidth < 600) {
-    hideRightSidebar();
-  } 
-
-  const contact = document.querySelector("main .contact") as HTMLElement;
-  contact.style.display = "block";
+  hideHome();
+  showContact();
 };
 
 export const handleHome = () => {

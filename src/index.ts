@@ -17,7 +17,7 @@ export const applyHandlers = () => {
   const cancel = document.querySelector(".cancel") as HTMLElement;
   cancel.addEventListener("click", handleCancel);
 
-  const contact = document.querySelector(".nav a:nth-child(2)") as HTMLElement;
+  const contact = document.querySelector("ul .contact") as HTMLElement;
   contact.addEventListener("click", handleContact);
 
   const home = document.querySelector(".nav a:nth-child(1)") as HTMLElement;
