@@ -1,12 +1,17 @@
 import { appendChildrenToParent } from "../utility/dom-utilities";
+import { LeftSidebar } from "./left-sidebar";
+import { RightSidebar } from "./right-sidebar";
 
 export class About {
   create(): HTMLElement {
     const about = document.createElement("div");
     about.setAttribute("class", "about");
 
+    const about_content = document.createElement("div");
+    about_content.setAttribute("class", "about-content");
+
     const h2 = document.createElement("h2");
-    h2.textContent = "Super Basic";
+    h2.textContent = "អំពីយើង";
 
     const intro = document.createElement("div");
     intro.setAttribute("class", "intro");
@@ -18,13 +23,13 @@ export class About {
 
     const mission = document.createElement("div");
     mission.setAttribute("class", "mission"); 
-    const mission_h3 = document.createElement("h3");
-    mission_h3.textContent = `បេសកកម្មរបស់យើង៖`;
+    const mission_h2 = document.createElement("h2");
+    mission_h2.textContent = `បេសកកម្មរបស់យើង៖`;
     const mission_para = document.createElement("p");
     mission_para.textContent = `
       ផ្តល់នូវការអប់រំដែលងាយស្រួលទទួលបាន និងមានប្រសិទ្ធិភាព ដើម្បីលើកកម្ពស់ភាពច្នៃប្រឌិត និងការរៀនសូត្រពេញមួយជីវិត។ យើងខ្ញុំជឿជាក់លើឥទ្ធិពលនៃការបង្រៀនសិស្សឱ្យមានទំនួលខុសត្រូវ ចេះដោះស្រាយបញ្ហា និងបទពិសោធន៍ជាក់ស្ដែង។
     `;
-    appendChildrenToParent(mission, mission_h3, mission_para);
+    appendChildrenToParent(mission, mission_h2, mission_para);
 
     const courses = document.createElement("div");
     courses.setAttribute("class", "courses");
@@ -83,11 +88,35 @@ export class About {
     conclusion_para.textContent = `
       យើងខ្ញុំរីករាយនឹងផ្តល់នូវបរិយាកាសការរៀនសូត្រដែលមានសីលធម៌ និង ទំនួលខុសត្រូវខ្ពស់។ គ្រូបង្រៀនដែលមានបទពិសោធន៍របស់យើងខ្ញុំ ប្តេជ្ញាជួយអ្នកឱ្យទទួលបានជោគជ័យ។ យើងខ្ញុំផ្តល់អទ្ទិភាពដល់ការរៀនសូត្រជាក់ស្ដែង និង ការងារជាលក្ខណៈ professional ដើម្បីធានាថាអ្នកទទួលបានជំនាញ និងចំណេះដឹងជាក់ស្ដែងដែលអ្នកត្រូវការ៕
     `;
-    appendChildrenToParent(conclusion, conclusion_para);
+    appendChildrenToParent(
+      conclusion,
+      conclusion_para,
+      );
 
-    appendChildrenToParent(courses, courses_h2, web_development, generative_ai, mathematics, portfolio, conclusion);
+    appendChildrenToParent(
+      courses,
+      courses_h2,
+      web_development,
+      generative_ai,
+      mathematics,
+      portfolio,
+      conclusion,
+    );
 
-    appendChildrenToParent(about, h2, intro, mission, courses);
+    appendChildrenToParent(
+      about_content,
+      h2,
+      intro,
+      mission,
+      courses
+    );
+
+    appendChildrenToParent(
+      about,
+      new LeftSidebar().create(),
+      about_content,
+      new RightSidebar().create(),
+    );
 
     return about;
   }
