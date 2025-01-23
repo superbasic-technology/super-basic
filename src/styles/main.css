@@ -99,16 +99,21 @@ main {
     background: #1992d4;
     padding: var(--spacing-padding);
     color: #f3f3f3;
+    gap: 1rem;
+    flex: 0 1 20%;
+  }
+
+  & .sidebar.left .topics {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    flex: 0 1 20%;
   }
 
   & .main-content {
     background: #e2e8f0;
     padding: var(--spacing-padding);
     flex: 0 1 60%;
+    border-left: 1px solid #fff;
   }
 
   & .main-content > h2 {
@@ -140,10 +145,15 @@ main {
 
   & .services {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
-  & .cards-container {
+  & .services > h2 {
+    margin-bottom: 1rem;
+  }
+
+  & .services-container {
     display: grid;
     grid-template-columns: repeat(2, clamp(360px, 20vw, 25vw));
     gap: 1rem;
@@ -164,7 +174,7 @@ main {
 
   & .service-card img {
     width: clamp(300px, 20vw, 20vw);
-    height: auto;
+    height: 200px;
   }
 
   & .service-card ul {
@@ -217,19 +227,22 @@ main {
     background: #e2e8f0;
     padding: var(--spacing-padding);
     flex: 0 1 20%;
+    border-left: 1px solid #fff;
+  }
+
+  & .sidebar.right .news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   & .sidebar.right .internship {
     background: #fff;
     padding: var(--spacing-padding);
     border-radius: var(--border-radius);
-    width: 96%;
+    width: 90%;
     margin: 0 auto;
-  }
-
-  & .sidebar.right > h3 {
-    text-align: center;
-    margin-bottom: 1rem;
   }
 }
 
@@ -270,7 +283,7 @@ footer {
       flex: 1;
     }
 
-    & .cards-container {
+    & .services-container {
       grid-template-columns: repeat(1, clamp(560px, 24vw, 24vw));
     }
 
@@ -360,7 +373,7 @@ footer {
       flex: 1;
     }
 
-    & .main-content .cards-container {
+    & .main-content .services-container {
       grid-template-columns: repeat(1, clamp(360px, 24vw, 24vw));
     }
 
