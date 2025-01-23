@@ -3,15 +3,17 @@ import { mainContent } from "./components/main-content";
 import { header } from "./components/header";
 import { rightSidebar } from "./components/right-sidebar";
 import { leftSidebar } from "./components/left-sidebar"; 
+import { home } from "./components/home";
 import { handleHamburgerMenu, handleCancel, handleContact, handleHome, handleAbout, handleNews } from "./utility/handlers";
 import { footer } from "./components/footer";
 
-export const main = () => {
+export const app = () => {
   mainContent();
   header();
   rightSidebar();
   leftSidebar();
   footer();
+  home();
 };
 
 export const applyHandlers = () => {
@@ -37,5 +39,5 @@ export const applyHandlers = () => {
   news.addEventListener("click", handleNews);
 };
 
-main();
+app();
 applyHandlers();
