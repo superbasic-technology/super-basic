@@ -1,15 +1,17 @@
 import { appendChildrenToParent } from "../utility/dom-utilities";
+import { LeftSidebar } from "./left-sidebar";
+import { RightSidebar } from "./right-sidebar";
 
 export class Contact {
   create(): HTMLElement {
     const contact = document.createElement("div");
-    contact.setAttribute("class", "contact");
-
-    const contactMethodsHeader = document.createElement("h2");
-    contactMethodsHeader.textContent = "ទាក់ទងមកយើងខ្ញុំតាមរយៈ";
+    contact.setAttribute("class", "contact"); 
 
     const contactMethodsContainer = document.createElement("div");
     contactMethodsContainer.setAttribute("class", "contact-methods-container");
+
+    const contactMethodsHeader = document.createElement("h2");
+    contactMethodsHeader.textContent = "ទាក់ទងមកយើងខ្ញុំតាមរយៈ";
 
     const ul = document.createElement("ul");
     const contactMethods = [
@@ -24,6 +26,12 @@ export class Contact {
       "https://web.facebook.com/profile.php?id=61571511628571",
       "https://www.tiktok.com/@superbasic"   
     ];
+
+    appendChildrenToParent(
+      contactMethodsContainer,
+      contactMethodsHeader,
+    );
+ 
 
     for (let i = 0; i < contactMethods.length; i += 1) {
       const link = document.createElement("a");
@@ -45,7 +53,12 @@ export class Contact {
       contactMethodsContainer.appendChild(ul);
     }
 
-    appendChildrenToParent(contact, contactMethodsHeader, contactMethodsContainer);
+    appendChildrenToParent(
+      contact,
+      new LeftSidebar().create(),      
+      contactMethodsContainer,
+      new RightSidebar().create(),
+    );
 
     return contact;
   }
