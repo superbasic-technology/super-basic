@@ -29,15 +29,3 @@ class WhyNoInternshipOrJob {
     return whyNoInternshipOrJob_para;
   }
 }
-
-export const leftSidebar = () => {
-  const left_sidebar = document.querySelector(".sidebar.left") as HTMLElement;
-  const left_sidebar_h3 = document.createElement("h3");
-  left_sidebar_h3.textContent = "អត្ថបទអំពីជំនាញ IT៖";
-
-  appendChildrenToParent(
-    left_sidebar,
-    left_sidebar_h3,
-    new WhyNoInternshipOrJob().create(),
-  );
-};
