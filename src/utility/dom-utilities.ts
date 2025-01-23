@@ -37,3 +37,12 @@ export const hideRightSidebar = () => {
   const rightSidebar = document.querySelector(".sidebar.right") as HTMLElement;
   rightSidebar.style.display = "none";
 };
+
+export const appendToMain = (...elements: HTMLElement[]) => {
+  const main = document.querySelector("main") as HTMLElement;
+
+  appendChildrenToParent(
+    main,
+    ...elements
+  );
+};
