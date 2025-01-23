@@ -1,6 +1,5 @@
 import { appendChildrenToParent } from "../utility/dom-utilities";
 import facebook from "../assets/images/facebook.svg";
-import tiktok from "../assets/images/tiktok-logo.svg";
 
 class SocialMedias {
   create(): HTMLElement {
