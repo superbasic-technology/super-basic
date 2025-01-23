@@ -23,7 +23,7 @@ export const applyHandlers = () => {
   const home = document.querySelector("ul .home") as HTMLElement;
   home.addEventListener("click", handleHome);
 
-  const about = document.querySelector(".nav a:nth-child(3)") as HTMLElement;
+  const about = document.querySelector("ul .about") as HTMLElement;
   about.addEventListener("click", handleAbout);
 
   const logo = document.querySelector("header .logo") as HTMLElement;

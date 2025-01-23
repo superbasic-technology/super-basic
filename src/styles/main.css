@@ -86,6 +86,10 @@ main {
   display: grid;
   grid-template: repeat(1, 1fr) / repeat(1, clamp(160px, 14vw, 16vw) 4fr clamp(200px, 18vw, 20vw));
 
+  & p {
+    text-indent: 1rem;
+  }
+
   & .home {
     display: flex;
     width: 100vw;
@@ -112,9 +116,26 @@ main {
     margin-bottom: 1rem;
   }
 
-  & .main-content .contact {
+  & .contact {
     display: none;
+    width: 100vw;
+  }
+
+  & .contact > .sidebar.left, .contact > .sidebar.right {
+    flex: 0 1 20%;
+  }
+
+  & .contact > .contact-methods-container {
+    background: #e2e8f0;
+    flex: 0 1 60%;
     padding: var(--spacing-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & .contact > .contact-methods-container > h2 {
+    margin-bottom: 1rem;
   }
 
   & .services {
@@ -162,16 +183,20 @@ main {
 
   & .about {
     display: none;
-    padding: var(--spacing-padding);
+    width: 100vw;
   }
 
-  & .about > h2 {
+  & .about .about-content {
+    flex: 0 1 60%;
+    padding: var(--spacing-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & .about-content > h2 {
     text-align: center;
     margin-bottom: 1rem;
-  }
-
-  & .about p {
-    text-indent: 1rem;
   }
 
   & .about .intro {
@@ -194,7 +219,7 @@ main {
     flex: 0 1 20%;
   }
 
-  & .sidebar.right > .internship {
+  & .sidebar.right .internship {
     background: #fff;
     padding: var(--spacing-padding);
     border-radius: var(--border-radius);
@@ -255,6 +280,14 @@ footer {
 
     & .sidebar.right {
       display: none;
+    }
+
+    & .contact > .contact-methods-container {
+      flex: 0 1 100%;
+    }
+
+    & .about .about-content {
+      flex: 0 1 100%;
     }
   }
 }
@@ -340,6 +373,13 @@ footer {
       display: none;
     }
 
+    & .contact > .contact-methods-container {
+      flex: 0 1 100%;
+    }
+
+    & .about .about-content {
+      flex: 0 1 100%;
+    }
   }
 
   footer {
