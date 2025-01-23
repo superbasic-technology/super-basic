@@ -43,6 +43,11 @@ export const showMainContent = () => {
   mainContent.style.display = "block";
 };
 
+export const showContact = () => {
+  const contact = document.querySelector("main .contact") as HTMLElement;
+  contact.style.display = "block";
+};
+
 export const appendToMain = (...elements: HTMLElement[]) => {
   const main = document.querySelector("main") as HTMLElement;
 
