@@ -28,14 +28,19 @@ export const hideMainContent = () => {
   mainContent.style.display = "none";
 };
 
-export const showMainContent = () => {
-  const mainContent = document.querySelector(".main-content") as HTMLElement;
-  mainContent.style.display = "block";
-};
-
 export const hideRightSidebar = () => {
   const rightSidebar = document.querySelector(".sidebar.right") as HTMLElement;
   rightSidebar.style.display = "none";
+};
+
+export const hideHome = () => {
+  const home = document.querySelector("main .home") as HTMLElement;
+  home.style.display = "none";
+};
+
+export const showMainContent = () => {
+  const mainContent = document.querySelector(".main-content") as HTMLElement;
+  mainContent.style.display = "block";
 };
 
 export const appendToMain = (...elements: HTMLElement[]) => {
