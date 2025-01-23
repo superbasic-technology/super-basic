@@ -80,11 +80,16 @@
 }
 
 main {
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2),
+  0 5px 10px rgba(0, 0, 0, 0.2);
   grid-column: 1 / 4;
   display: grid;
   grid-template: repeat(1, 1fr) / repeat(1, clamp(160px, 14vw, 16vw) 4fr clamp(200px, 18vw, 20vw));
-  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2),
-              0 5px 10px rgba(0, 0, 0, 0.2);
+
+  & .home {
+    display: flex;
+    width: 100vw;
+  }
 
   & .sidebar.left {
     background: #1992d4;
@@ -93,11 +98,13 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    flex: 0 1 20%;
   }
 
   & .main-content {
     background: #e2e8f0;
     padding: var(--spacing-padding);
+    flex: 0 1 60%;
   }
 
   & .main-content > h2 {
@@ -135,7 +142,8 @@ main {
   }
 
   & .service-card img {
-    width: 80%;
+    width: clamp(300px, 20vw, 20vw);
+    height: auto;
   }
 
   & .service-card ul {
@@ -183,16 +191,20 @@ main {
   & .sidebar.right {
     background: #e2e8f0;
     padding: var(--spacing-padding);
+    flex: 0 1 20%;
   }
 
-  & .sidebar.right > div {
+  & .sidebar.right > .internship {
     background: #fff;
     padding: var(--spacing-padding);
     border-radius: var(--border-radius);
+    width: 96%;
+    margin: 0 auto;
   }
 
   & .sidebar.right > h3 {
     text-align: center;
+    margin-bottom: 1rem;
   }
 }
 
@@ -214,10 +226,43 @@ footer {
   }
 }
 
+/* Styles for iPads */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    font-size: 24px;
+  }
+
+  header {
+
+    & .nav {
+      width: 40vw;
+    }
+  }
+
+  main {
+
+    & .main-content {
+      flex: 1;
+    }
+
+    & .cards-container {
+      grid-template-columns: repeat(1, clamp(560px, 24vw, 24vw));
+    }
+
+    & .sidebar.left {
+      display: none;
+    }
+
+    & .sidebar.right {
+      display: none;
+    }
+  }
+}
+
 /* Target iPhone screen sizes */
 @media screen and (max-width: 768px) { /* Covers most iPhones */
   .container {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   header {
@@ -274,14 +319,16 @@ footer {
 
   main {
 
+    & .sidebar.left {
+      display: none;
+    }
+
     & .main-content {
-      width: 100vw;
+      flex: 1;
     }
 
     & .main-content .cards-container {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      width: 80vw;
+      grid-template-columns: repeat(1, clamp(360px, 24vw, 24vw));
     }
 
     & .services {
@@ -289,13 +336,10 @@ footer {
       justify-content: center;
     }
 
-    & .sidebar.left, .sidebar.right {
+    & .sidebar.right {
       display: none;
     }
 
-    & .sidebar.right {
-      width: 100vw;
-    }
   }
 
   footer {
@@ -305,40 +349,6 @@ footer {
 
     & .social-medias {
       align-self: flex-start;
-    }
-  }
-}
-
-/* Styles for iPads */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .container {
-    font-size: 18px;
-  }
-
-  main {
-    display: flex;
-
-    & .sidebar.left {
-      display: none;
-    }
-
-    & .main-content {
-      width: 78vw;
-    }
-
-    & .main-content .cards-container {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    & .cards-container .service-card{
-      width: 90%;
-      height: auto;
-    }
-
-    & .sidebar.right {
-      width: 26vh;
-      margin-left: auto;
     }
   }
 }
