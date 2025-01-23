@@ -9,3 +9,10 @@ export class Home {
     return home;
   }
 }
+
+export const home = () => {
+  appendChildrenToParent(
+    new Home().create(),
+    new LeftSidebar().create(),
+  );
+};
