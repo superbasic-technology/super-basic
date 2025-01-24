@@ -25,6 +25,11 @@ export const hideHome = () => {
   home.style.display = "none";
 };
 
+export const hideNews = () => {
+  const news = document.querySelector("main .news") as HTMLElement;
+  news.style.display = "none";
+};
+
 export const showContact = () => {
   const contact = document.querySelector("main .contact") as HTMLElement;
   contact.style.display = `flex`;
@@ -33,6 +38,11 @@ export const showContact = () => {
 export const showAbout = () => {
   const about = document.querySelector("main .about") as HTMLElement;
   about.style.display = "flex";
+};
+
+export const showNews = () => {
+  const news = document.querySelector("main > .news") as HTMLElement;
+  news.style.display = "flex";
 };
 
 export const appendToMain = (...elements: HTMLElement[]) => {
