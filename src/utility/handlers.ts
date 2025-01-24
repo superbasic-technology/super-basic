@@ -46,7 +46,7 @@ export const handleNews = () => {
 };
 
 export const handleNavigationAtSmallScreen = () => {
-  if (window.innerWidth < 600) {
+  if (window.innerWidth < 800) {
     handleCancel();
   }
 };
