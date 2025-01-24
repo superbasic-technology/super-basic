@@ -25,7 +25,7 @@ const applyHandlers = () => {
     about.addEventListener("click", handlers_1.handleAbout);
     const logo = document.querySelector("header .logo");
     logo.addEventListener("click", handlers_1.handleHome);
-    const news = document.querySelector(".nav a:nth-child(4)");
+    const news = document.querySelector("ul .news");
     news.addEventListener("click", handlers_1.handleNews);
 };
 exports.applyHandlers = applyHandlers;

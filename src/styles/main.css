@@ -88,6 +88,7 @@ main {
 
   & p {
     text-indent: 1rem;
+ 
   }
 
   & .home {
@@ -106,6 +107,7 @@ main {
   & .sidebar.left .topics {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
 
@@ -114,11 +116,6 @@ main {
     padding: var(--spacing-padding);
     flex: 0 1 60%;
     border-left: 1px solid #fff;
-  }
-
-  & .main-content > h2 {
-    text-align: center;
-    margin-bottom: 1rem;
   }
 
   & .contact {
@@ -202,6 +199,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #e2e8f0;
   }
 
   & .about-content > h2 {
@@ -223,6 +221,37 @@ main {
     gap: 1rem;
   }
 
+  & > .news {
+    display: none;
+    background: #e2e8f0;
+    width: 100vw;
+  }
+
+  & > .news .news-content {
+    flex: 0 1 60%;
+    padding: var(--spacing-padding);
+    display: flex;
+    justify-content: center;
+  }
+
+  & > .news .news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  & > .news .internship {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  & > .news > .sidebar.left, > .news > .sidebar.right {
+    flex: 0 1 20%;
+  }
+
   & .sidebar.right {
     background: #e2e8f0;
     padding: var(--spacing-padding);
@@ -239,10 +268,14 @@ main {
 
   & .sidebar.right .internship {
     background: #fff;
-    padding: var(--spacing-padding);
     border-radius: var(--border-radius);
-    width: 90%;
     margin: 0 auto;
+    width: 98%;
+    padding: var(--spacing-padding);
+  }
+
+  & .sidebar.right .internship p{
+    font-size: 14px;
   }
 }
 
@@ -273,7 +306,11 @@ footer {
   header {
 
     & .nav {
-      width: 40vw;
+      width: 60vw;
+    }
+
+    & .nav ul .news {
+      display: block;
     }
   }
 
@@ -302,13 +339,17 @@ footer {
     & .about .about-content {
       flex: 0 1 100%;
     }
+
+    & > .news .news-content {
+      flex: 0 1 100%;
+    }
   }
 }
 
 /* Target iPhone screen sizes */
 @media screen and (max-width: 768px) { /* Covers most iPhones */
   .container {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   header {
@@ -392,6 +433,14 @@ footer {
 
     & .about .about-content {
       flex: 0 1 100%;
+    }
+
+    & > .news .news-content {
+      flex: 0 1 100%;
+    }
+
+    & > .news .news-content p {
+      font-size: 16px;
     }
   }
 
