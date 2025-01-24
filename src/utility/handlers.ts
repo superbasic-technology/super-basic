@@ -21,6 +21,7 @@ export const handleContact = () => {
   hideHome();
   hideAbout();
   hideNews();
+  handleNavigationAtSmallScreen();
   showContact();
 };
 
@@ -32,6 +33,7 @@ export const handleAbout = () => {
   hideHome();
   hideContact();
   hideNews();
+  handleNavigationAtSmallScreen();
   showAbout();
 };
 
@@ -39,6 +41,7 @@ export const handleNews = () => {
   hideHome();
   hideContact();
   hideAbout();
+  handleNavigationAtSmallScreen();
   showNews();
 };
 

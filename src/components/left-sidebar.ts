@@ -31,7 +31,7 @@ export class WhyNoInternshipOrJob {
     const whyNoInternshipOrJob_para = document.createElement("p");
     whyNoInternshipOrJob_para.setAttribute("class", "whyNoInternshipOrJob");
     whyNoInternshipOrJob_para.textContent = `
-      តើហេតុអ្វីសិស្សដែលរៀនជំនាញទាក់ទងនឹងការសរសេរកូដ (coding) មិនអាចរកឱកាសហាត់ការ (internship) ឬ​ ឱកាសការងារបាន?
+      តើហេតុអ្វីសិស្សដែលរៀនជំនាញទាក់ទងនឹងការសរសេរកូដ«coding»មិនអាចរកឱកាសហាត់ការ«internship»ឬ​ឱកាសការងារបាន?
     `;
 
     return whyNoInternshipOrJob_para;

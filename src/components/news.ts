@@ -1,7 +1,7 @@
 import { appendChildrenToParent } from "../utility/dom-utilities";
 import { LeftSidebar } from "./left-sidebar";
 import { RightSidebar } from "./right-sidebar";
-import { WhyNoInternshipOrJob } from "./left-sidebar";
+import { News as MainNews } from "./right-sidebar";
 
 export class News {
   create(): HTMLElement {
@@ -21,26 +21,14 @@ export class News {
 
 export class NewsContent {
   create(): HTMLElement {
-    const news_content = document.createElement("div");
-    news_content.setAttribute("class", "news-content");
-
-    const topics = document.createElement("div");
-    topics.setAttribute("class", "topics");
-
-    const news_content_h3 = document.createElement("h3");
-    news_content_h3.textContent = "អត្ថបទអំពីជំនាញ IT៖";
+    const right_sidebar = document.createElement("div");
+    right_sidebar.setAttribute("class", "news-content");
 
     appendChildrenToParent(
-      topics,
-      news_content_h3,
-      new WhyNoInternshipOrJob().create(),
+      right_sidebar,
+      new MainNews().create(),
     );
 
-    appendChildrenToParent(
-      news_content,
-      topics,
-    );
-
-    return news_content;
+    return right_sidebar;
   }
 }
