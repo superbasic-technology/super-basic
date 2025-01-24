@@ -35,6 +35,13 @@ export const handleAbout = () => {
   showAbout();
 };
 
+export const handleNews = () => {
+  hideHome();
+  hideContact();
+  hideAbout();
+  showNews();
+};
+
 export const handleNavigationAtSmallScreen = () => {
   if (window.innerWidth < 600) {
     handleCancel();

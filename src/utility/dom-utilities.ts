@@ -26,7 +26,7 @@ export const hideHome = () => {
 };
 
 export const hideNews = () => {
-  const news = document.querySelector("main .news") as HTMLElement;
+  const news = document.querySelector("main > .news") as HTMLElement;
   news.style.display = "none";
 };
 
