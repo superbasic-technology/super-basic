@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.appendToMain = exports.showAbout = exports.showContact = exports.hideHome = exports.hideMainContent = exports.hideAbout = exports.hideContact = exports.appendChildrenToParent = void 0;
+exports.appendToMain = exports.showNews = exports.showAbout = exports.showContact = exports.hideNews = exports.hideHome = exports.hideMainContent = exports.hideAbout = exports.hideContact = exports.appendChildrenToParent = void 0;
 const appendChildrenToParent = (parent, ...children) => {
     for (let i = 0; i < children.length; i += 1) {
         parent.appendChild(children[i]);
@@ -27,6 +27,11 @@ const hideHome = () => {
     home.style.display = "none";
 };
 exports.hideHome = hideHome;
+const hideNews = () => {
+    const news = document.querySelector("main > .news");
+    news.style.display = "none";
+};
+exports.hideNews = hideNews;
 const showContact = () => {
     const contact = document.querySelector("main .contact");
     contact.style.display = `flex`;
@@ -37,6 +42,11 @@ const showAbout = () => {
     about.style.display = "flex";
 };
 exports.showAbout = showAbout;
+const showNews = () => {
+    const news = document.querySelector("main > .news");
+    news.style.display = "flex";
+};
+exports.showNews = showNews;
 const appendToMain = (...elements) => {
     const main = document.querySelector("main");
     (0, exports.appendChildrenToParent)(main, ...elements);

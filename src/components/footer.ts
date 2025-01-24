@@ -29,7 +29,7 @@ class Copyright {
     copyright.setAttribute("class", "copyright");
   
     const copyright_info = document.createElement("small");
-    copyright_info.textContent = "© 2025 Super Basic. All rights reserved.";
+    copyright_info.textContent = "© 2019 - 2025 Super Basic. All rights reserved.";
   
     appendChildrenToParent(copyright, copyright_info);
 

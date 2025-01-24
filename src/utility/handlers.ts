@@ -1,4 +1,4 @@
-import { hideContact, hideAbout, hideMainContent, hideHome, showContact, showAbout } from "./dom-utilities";
+import { hideContact, hideAbout, hideHome, showContact, showAbout, showNews, hideNews } from "./dom-utilities";
 
 export const handleHamburgerMenu = () => {
   const menu = document.querySelector(".hamburger-menu") as HTMLElement;
@@ -20,6 +20,8 @@ export const handleCancel = () => {
 export const handleContact = () => {
   hideHome();
   hideAbout();
+  hideNews();
+  handleNavigationAtSmallScreen();
   showContact();
 };
 
@@ -30,21 +32,21 @@ export const handleHome = () => {
 export const handleAbout = () => {
   hideHome();
   hideContact();
+  hideNews();
+  handleNavigationAtSmallScreen();
   showAbout();
+};
+
+export const handleNews = () => {
+  hideHome();
+  hideContact();
+  hideAbout();
+  handleNavigationAtSmallScreen();
+  showNews();
 };
 
 export const handleNavigationAtSmallScreen = () => {
   if (window.innerWidth < 600) {
     handleCancel();
-  }
-};
-
-export const handleNews = () => {
-  if (window.innerWidth < 600) {
-    hideMainContent();
-    handleNavigationAtSmallScreen();
-
-    const rightSidebar = document.querySelector(".sidebar.right") as HTMLElement;
-    rightSidebar.style.display = "block";
   }
 };
