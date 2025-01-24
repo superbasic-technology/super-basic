@@ -26,7 +26,7 @@ export class LeftSidebar {
   }
 }
 
-class WhyNoInternshipOrJob {
+export class WhyNoInternshipOrJob {
   create(): HTMLElement {
     const whyNoInternshipOrJob_para = document.createElement("p");
     whyNoInternshipOrJob_para.setAttribute("class", "whyNoInternshipOrJob");
