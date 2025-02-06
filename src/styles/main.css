@@ -65,10 +65,6 @@
     justify-content: space-between;
   }
 
-  & .nav ul .news {
-    display: none;
-  }
-
   & .nav .cancel {
     display: none;
   }
