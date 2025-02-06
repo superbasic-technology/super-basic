@@ -1,6 +1,6 @@
 import "./styles/main.css"
 import { header } from "./components/header";
-import { handleHamburgerMenu, handleCancel, handleContact, handleHome, handleAbout, handleNews } from "./utility/handlers";
+import { handleHamburgerMenu, handleCancel, handleContact, handleHome, handleAbout, handleNews, handleNavigationAtSmallScreen } from "./utility/handlers";
 import { footer } from "./components/footer";
 import { main } from "./components/main";
 
@@ -31,6 +31,9 @@ export const applyHandlers = () => {
 
   const news = document.querySelector("ul .news") as HTMLElement;
   news.addEventListener("click", handleNews);
+
+  // Hide .hamburger-menu when the screen is wider than 768px
+  window.addEventListener("resize", handleNavigationAtSmallScreen);
 };
 
 app();

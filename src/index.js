@@ -27,6 +27,8 @@ const applyHandlers = () => {
     logo.addEventListener("click", handlers_1.handleHome);
     const news = document.querySelector("ul .news");
     news.addEventListener("click", handlers_1.handleNews);
+    // Hide .hamburger-menu when the screen is wider than 768px
+    window.addEventListener("resize", handlers_1.handleNavigationAtSmallScreen);
 };
 exports.applyHandlers = applyHandlers;
 (0, exports.app)();
