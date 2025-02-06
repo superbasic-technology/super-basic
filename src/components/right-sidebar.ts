@@ -7,7 +7,7 @@ export class RightSidebar {
 
     appendChildrenToParent(
       right_sidebar,
-      new News().create(),
+      new SidebarNews().create(),
     );
 
     return right_sidebar;
@@ -29,20 +29,20 @@ export class Internship {
   }
 }
 
-export class News {
+export class SidebarNews {
   create(): HTMLElement {
-    const news = document.createElement("div");
-    news.setAttribute("class", "news");
+    const sidebarNews = document.createElement("div");
+    sidebarNews.setAttribute("class", "sidebar-news");
 
     const right_sidebar_h3 = document.createElement("h3");
     right_sidebar_h3.textContent = "ពត៌មាន";
 
     appendChildrenToParent(
-      news,
+      sidebarNews,
       right_sidebar_h3,
       new Internship().create(),
     );
 
-    return news;
+    return sidebarNews;
   }
 }
