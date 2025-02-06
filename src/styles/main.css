@@ -221,7 +221,7 @@ main {
     gap: 1rem;
   }
 
-  & > .news {
+  & > .main-news {
     display: none;
     background: #e2e8f0;
     width: 100vw;

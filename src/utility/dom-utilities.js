@@ -28,8 +28,8 @@ const hideHome = () => {
 };
 exports.hideHome = hideHome;
 const hideNews = () => {
-    const news = document.querySelector("main > .news");
-    news.style.display = "none";
+    const mainNews = document.querySelector(".main-news");
+    mainNews.style.display = "none";
 };
 exports.hideNews = hideNews;
 const showContact = () => {
@@ -43,7 +43,7 @@ const showAbout = () => {
 };
 exports.showAbout = showAbout;
 const showNews = () => {
-    const news = document.querySelector("main > .news");
+    const news = document.querySelector(".main-news");
     news.style.display = "flex";
 };
 exports.showNews = showNews;

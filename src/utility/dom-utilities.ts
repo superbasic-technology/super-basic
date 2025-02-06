@@ -26,8 +26,8 @@ export const hideHome = () => {
 };
 
 export const hideNews = () => {
-  const news = document.querySelector("main > .news") as HTMLElement;
-  news.style.display = "none";
+  const mainNews = document.querySelector(".main-news") as HTMLElement;
+  mainNews.style.display = "none";
 };
 
 export const showContact = () => {
@@ -41,7 +41,7 @@ export const showAbout = () => {
 };
 
 export const showNews = () => {
-  const news = document.querySelector("main > .news") as HTMLElement;
+  const news = document.querySelector(".main-news") as HTMLElement;
   news.style.display = "flex";
 };
 

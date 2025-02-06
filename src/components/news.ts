@@ -3,10 +3,10 @@ import { LeftSidebar } from "./left-sidebar";
 import { RightSidebar } from "./right-sidebar";
 import "../styles/News.css";
 
-export class News {
+export class MainNews {
   create(): HTMLElement {
     const news = document.createElement("div");
-    news.setAttribute("class", "news");
+    news.setAttribute("class", "main-news");
 
     appendChildrenToParent(
       news,
@@ -55,7 +55,7 @@ class JobDescription {
     sectionHeader.classList.add("section-header");
 
     const para = document.createElement("p");
-    para.textContent = "Super Basic យើងខ្ញុំកំពុងស្វែងរកបុគ្គលដែលមានសមត្ថភាពខ្ពស់ និង មានជំនាញ ចូលរួមក្រុមរបស់យើងខ្ញុំជាអ្នកអភិវឌ្ឍ website (Frontend Development Internship)។ បេក្ខជនដែលចេះតិចតួចក៏អាចដាក់ CV បានដែរ។";
+    para.textContent = "Super Basic យើងខ្ញុំកំពុងស្វែងរកបុគ្គលដែលមានសមត្ថភាពខ្ពស់ និង មានជំនាញ ចូលរួមក្រុមរបស់យើងខ្ញុំជាអ្នកអភិវឌ្ឍ website (Frontend Development Internship)។ បេក្ខជនដែលចេះតិចតួចក៏អាចដាក់ CV បានដែរ៕";
 
     appendChildrenToParent(
       jobDescription,
