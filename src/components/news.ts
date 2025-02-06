@@ -1,7 +1,7 @@
 import { appendChildrenToParent } from "../utility/dom-utilities";
 import { LeftSidebar } from "./left-sidebar";
 import { RightSidebar } from "./right-sidebar";
-import "../styles/News.css";
+import "../styles/MainNews.css";
 
 export class MainNews {
   create(): HTMLElement {
