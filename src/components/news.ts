@@ -38,6 +38,7 @@ export class NewsContent {
       descriptionHeader,
       new JobDescription().create(),
       new Duty().create(),
+      new Requirements().create(),
     );
 
     return newsContent;
@@ -101,5 +102,45 @@ class Duty {
     );
 
     return dutySection;
+  }
+}
+
+class Requirements {
+  create(): HTMLElement {
+    const duties: string[] = [
+      ". អាយុ18ឆ្នាំឡើងទៅ",
+      ". យល់ច្បាស់អំពី HTML, CSS, និង JavaScript/TypeScript",
+      ". មានបទពិសោធន៍ជាមួយ frameworks ដ៏ពេញនិយមយ៉ាងហោចណាស់មួយ (React, Vue, ឬ Angular)",
+      ". ចេះប្រើ​ version control (Git)",
+      ". ចេះប្រើភាសាអង់គ្លេសសមល្មម",
+      ". មានពេល Part-Time ឬ  Full-Time៕",
+    ];
+    const requirementSection = document.createElement("section");
+    requirementSection.classList.add("requirement-section");
+
+    const requirementHeader = document.createElement("h6");
+    requirementHeader.classList.add("requirement-header");
+    requirementHeader.textContent = "Requirements:";
+
+    const list = document.createElement("ul");
+    
+    try {
+      for (let i = 0; i < duties.length; i += 1) {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${duties[i]}`;
+  
+        list.appendChild(listItem);
+      }
+    } catch(error) {
+      console.log(error);
+    }
+
+    appendChildrenToParent(
+      requirementSection,
+      requirementHeader,
+      list,
+    );
+
+    return requirementSection;
   }
 }
