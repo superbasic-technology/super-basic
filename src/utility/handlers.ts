@@ -46,7 +46,9 @@ export const handleNews = () => {
 };
 
 export const handleNavigationAtSmallScreen = () => {
-  if (window.innerWidth < 800) {
+  if (window.innerWidth < 768) {
     handleCancel();
+  } else if (window.innerWidth > 768) {
+    handleHamburgerMenu();
   }
 };

@@ -83,8 +83,7 @@ main {
   grid-template: repeat(1, 1fr) / repeat(1, clamp(160px, 14vw, 16vw) 4fr clamp(200px, 18vw, 20vw));
 
   & p {
-    text-indent: 1rem;
- 
+    text-indent: 1rem; 
   }
 
   & .home {
@@ -111,7 +110,6 @@ main {
     background: #e2e8f0;
     padding: var(--spacing-padding);
     flex: 0 1 60%;
-    border-left: 1px solid #fff;
   }
 
   & .contact {
@@ -187,6 +185,8 @@ main {
   & .about {
     display: none;
     width: 100vw;
+    padding: 1rem;
+    background: #e2e8f0;
   }
 
   & .about .about-content {
@@ -194,8 +194,7 @@ main {
     padding: var(--spacing-padding);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background: #e2e8f0;
+    align-items: center;    
   }
 
   & .about-content > h2 {
@@ -223,18 +222,11 @@ main {
     width: 100vw;
   }
 
-  & > .news .news-content {
+  & > .main-news .news-content {
     flex: 0 1 60%;
     padding: var(--spacing-padding);
     display: flex;
     justify-content: center;
-  }
-
-  & > .news .news{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
   }
 
   & > .news .internship {
@@ -309,6 +301,10 @@ footer {
       display: block;
       padding: 0;
     }
+
+    & .hamburger-menu {
+      display: none;
+    }
   }
 
   main {
@@ -337,7 +333,7 @@ footer {
       flex: 0 1 100%;
     }
 
-    & > .news .news-content {
+    & > .main-news .news-content {
       flex: 0 1 100%;
     }
   }
@@ -433,12 +429,9 @@ footer {
       flex: 0 1 100%;
     }
 
-    & > .news .news-content {
+    & > .main-news .news-content {
       flex: 0 1 100%;
-    }
-
-    & > .news .news-content p {
-      font-size: 16px;
+      padding: 0;
     }
   }
 

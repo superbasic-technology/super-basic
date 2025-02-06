@@ -11,7 +11,7 @@
       gap: 1rem;
     }
 
-    & h6 {
+    & h2 {
       font-size: 1.2rem;
     }
 
@@ -42,19 +42,17 @@
       align-self: center;
     }
 
-    & h6 {
-      font-size: 1.8rem;
-    }
-
     & ul {
       list-style: none;
-      font-size: 1.2rem;
     }
   }
 }
 
 /* For desktops and laptops */
 .main-news {
+  background: #e2e8f0;
+  flex: 0 1 60%;
+
   & .news-content {
     display: flex;
     flex-direction: column;
@@ -70,7 +68,7 @@
     align-self: center;
   }
 
-  & h6 {
+  & h2 {
     font-size: 1.8rem;
   }
 
