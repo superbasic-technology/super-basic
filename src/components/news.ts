@@ -37,7 +37,7 @@ export class NewsContent {
       newsHeader,
       descriptionHeader,
       new JobDescription().create(),
-
+      new Duty().create(),
     );
 
     return newsContent;
@@ -62,5 +62,44 @@ class JobDescription {
     );
 
     return jobDescription;
+  }
+}
+
+class Duty {
+  create(): HTMLElement {
+    const duties: string[] = [
+      ". អភិវឌ្ឍ និង ថែទាំផ្នែក client-side (frontend) សំរាប់កម្មវិធីអនឡាញដោយប្រើ React, Vue, ឬ Angular",
+      ". សហការជាមួយ Designers ដើម្បីបង្កើត user-friendly សម្រាប់អ្នកប្រើប្រាស់",
+      ". សរសេរកូដដែលមាន Documentation ត្រឹមត្រូវ",
+      ". ចូលរួមធ្វើការ code review និង រួមចំណែកក្នុងការ debug",
+      ". Write unit tests និង mock tests៕"
+    ];
+    const dutySection = document.createElement("section");
+    dutySection.classList.add("duty-section");
+
+    const dutyHeader = document.createElement("h6");
+    dutyHeader.classList.add("duty-header");
+    dutyHeader.textContent = "កាតព្វកិច្ច៖";
+
+    const list = document.createElement("ul");
+    
+    try {
+      for (let i = 0; i < duties.length; i += 1) {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${duties[i]}`;
+  
+        list.appendChild(listItem);
+      }
+    } catch(error) {
+      console.log(error);
+    }
+
+    appendChildrenToParent(
+      dutySection,
+      dutyHeader,
+      list,
+    );
+
+    return dutySection;
   }
 }

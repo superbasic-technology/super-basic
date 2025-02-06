@@ -259,7 +259,7 @@ main {
     border-left: 1px solid #fff;
   }
 
-  & .sidebar.right .news {
+  & .sidebar.right .sidebar-news {
     display: flex;
     flex-direction: column;
     align-items: center;
