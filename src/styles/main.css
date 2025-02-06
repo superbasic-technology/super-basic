@@ -185,7 +185,6 @@ main {
   & .about {
     display: none;
     width: 100vw;
-    padding: 1rem;
     background: #e2e8f0;
   }
 
