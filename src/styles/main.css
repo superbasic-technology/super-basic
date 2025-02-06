@@ -330,7 +330,7 @@ footer {
     }
 
     & .about {
-      padding: 1rem;
+      padding: 0 1rem 1rem 1rem;
     }
 
     & .about .about-content {
@@ -427,6 +427,10 @@ footer {
 
     & .contact > .contact-methods-container {
       flex: 0 1 100%;
+    }
+
+    & .about {
+      padding: 0 1rem 1rem 1rem;
     }
 
     & .about .about-content {
