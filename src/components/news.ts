@@ -39,6 +39,7 @@ export class NewsContent {
       new JobDescription().create(),
       new Duty().create(),
       new Requirements().create(),
+      new Benefits().create(),
     );
 
     return newsContent;
@@ -142,5 +143,43 @@ class Requirements {
     );
 
     return requirementSection;
+  }
+}
+
+class Benefits {
+  create(): HTMLElement {
+    const duties: string[] = [
+      ". ទទួលប្រាក់ខែ 250$/ខែ",
+      ". ទទួលបានបទពិសោធន៍ពី6ខែ ទៅ ១ឆ្នាំ",
+      ". ពេលចប់ internship អាចស្នើរចូលធ្វើការពេញសិទ្ធបាន ប្រាក់ខែចាប់ពី 500$/ខែ ទៅ 700$/ខែ",
+      ". អាចធ្វើការលក្ខណៈ Remote ឬ On-site បាន៕",
+    ];
+    const benefitsSection = document.createElement("section");
+    benefitsSection.classList.add("benefits-section");
+
+    const benefitsHeader = document.createElement("h6");
+    benefitsHeader.classList.add("benefits-header");
+    benefitsHeader.textContent = "អត្ថប្រយោជន៍៖";
+
+    const list = document.createElement("ul");
+    
+    try {
+      for (let i = 0; i < duties.length; i += 1) {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${duties[i]}`;
+  
+        list.appendChild(listItem);
+      }
+    } catch(error) {
+      console.log(error);
+    }
+
+    appendChildrenToParent(
+      benefitsSection,
+      benefitsHeader,
+      list,
+    );
+
+    return benefitsSection;
   }
 }
