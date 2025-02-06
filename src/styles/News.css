@@ -2,8 +2,6 @@
 @media screen and (max-width: 768px) {
   .main-news {
     display: none;
-    background: #e2e8f0;
-    width: 100vw;
     padding: 1rem;
 
     & .news-content {
@@ -12,18 +10,72 @@
       align-items: center;
       gap: 1rem;
     }
+
+    & h6 {
+      font-size: 1.2rem;
+    }
+
     & ul {
       list-style: none;
       font-size: 14px;
     }
 
-    & h6 {
-      font-size: 1.2rem;
-    }
   }
 }
 
 /* Styles for iPads */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-news {
+    padding: 1rem;
 
+    & .news-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    & .news-header {
+      align-self: center
+    }
+
+    & .description-header {
+      align-self: center;
+    }
+
+    & h6 {
+      font-size: 1.8rem;
+    }
+
+    & ul {
+      list-style: none;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+/* For desktops and laptops */
+.main-news {
+  & .news-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  & .news-header {
+    align-self: center
+  }
+
+  & .description-header {
+    align-self: center;
+  }
+
+  & h6 {
+    font-size: 1.8rem;
+  }
+
+  & ul {
+    list-style: none;
+    font-size: 1.2rem;
+  }
 }
