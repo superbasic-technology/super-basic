@@ -329,6 +329,10 @@ footer {
       flex: 0 1 100%;
     }
 
+    & .about {
+      padding: 1rem;
+    }
+
     & .about .about-content {
       flex: 0 1 100%;
     }

@@ -11,8 +11,8 @@
       gap: 1rem;
     }
 
-    & h2 {
-      font-size: 1.2rem;
+    & h2.news-header {
+      font-size: 24px;
     }
 
     & ul {
@@ -26,7 +26,7 @@
 /* Styles for iPads */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .main-news {
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
 
     & .news-content {
       display: flex;
@@ -35,7 +35,8 @@
     }
 
     & .news-header {
-      align-self: center
+      align-self: center;
+      font-size: 36px;
     }
 
     & .description-header {
@@ -69,7 +70,7 @@
   }
 
   & h2 {
-    font-size: 1.8rem;
+    font-size: 24px;;
   }
 
   & ul {
