@@ -30,7 +30,7 @@ export class NewsContent {
 
     const descriptionHeader = document.createElement("h2");
     descriptionHeader.classList.add("description-header");
-    descriptionHeader.textContent = "ស្វែងរកអ្នកហាត់ការ (internship)";
+    descriptionHeader.textContent = "ស្វែងរកអ្នកហាត់ការ (Internship)";
 
     appendChildrenToParent(
       newsContent,
@@ -79,7 +79,7 @@ class Duty {
     const dutySection = document.createElement("section");
     dutySection.classList.add("duty-section");
 
-    const dutyHeader = document.createElement("h6");
+    const dutyHeader = document.createElement("h2");
     dutyHeader.classList.add("duty-header");
     dutyHeader.textContent = "កាតព្វកិច្ច៖";
 
@@ -119,7 +119,7 @@ class Requirements {
     const requirementSection = document.createElement("section");
     requirementSection.classList.add("requirement-section");
 
-    const requirementHeader = document.createElement("h6");
+    const requirementHeader = document.createElement("h2");
     requirementHeader.classList.add("requirement-header");
     requirementHeader.textContent = "Requirements:";
 
@@ -157,7 +157,7 @@ class Benefits {
     const benefitsSection = document.createElement("section");
     benefitsSection.classList.add("benefits-section");
 
-    const benefitsHeader = document.createElement("h6");
+    const benefitsHeader = document.createElement("h2");
     benefitsHeader.classList.add("benefits-header");
     benefitsHeader.textContent = "អត្ថប្រយោជន៍៖";
 
