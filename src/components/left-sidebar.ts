@@ -28,7 +28,7 @@ export class LeftSidebar {
 
 export class WhyNoInternshipOrJob {
   create(): HTMLElement {
-    const whyNoInternshipOrJob_para = document.createElement("p");
+    const whyNoInternshipOrJob_para = document.createElement("a");
     whyNoInternshipOrJob_para.setAttribute("class", "whyNoInternshipOrJob");
     whyNoInternshipOrJob_para.textContent = `
       តើហេតុអ្វីសិស្សដែលរៀនជំនាញទាក់ទងនឹងការសរសេរកូដ«coding»មិនអាចរកឱកាសហាត់ការ«internship»ឬ​ឱកាសការងារបាន?
