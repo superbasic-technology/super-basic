@@ -1,4 +1,4 @@
-import { hideContact, hideAbout, hideHome, showContact, showAbout, showNews, hideNews } from "./dom-utilities";
+import { hideContact, hideAbout, hideHome, showContact, showAbout, showNews, hideNews, hideElement } from "./dom-utilities";
 
 export const handleHamburgerMenu = () => {
   const menu = document.querySelector(".hamburger-menu") as HTMLElement;
@@ -21,6 +21,7 @@ export const handleContact = () => {
   hideHome();
   hideAbout();
   hideNews();
+  hideElement(document.querySelector(".why-no-jobs") as HTMLElement);
   handleNavigationAtSmallScreen();
   showContact();
 };
@@ -33,6 +34,7 @@ export const handleAbout = () => {
   hideHome();
   hideContact();
   hideNews();
+  hideElement(document.querySelector(".why-no-jobs") as HTMLElement);
   handleNavigationAtSmallScreen();
   showAbout();
 };
@@ -41,6 +43,7 @@ export const handleNews = () => {
   hideHome();
   hideContact();
   hideAbout();
+  hideElement(document.querySelector(".why-no-jobs") as HTMLElement);
   handleNavigationAtSmallScreen();
   showNews();
 };
@@ -54,11 +57,10 @@ export const handleNavigationAtSmallScreen = () => {
 };
 
 export const handleTopic = () => {
-  const topic = document.querySelector(".why-no-jobs") as HTMLElement;
-  topic.style.display = "flex";
+  const whyNoJobs = document.querySelector(".why-no-jobs") as HTMLElement;
+  whyNoJobs.style.display = "flex";
   hideHome();
   hideContact();
   hideAbout();
   hideNews();
-
 };
