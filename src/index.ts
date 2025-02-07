@@ -34,9 +34,6 @@ export const applyHandlers = () => {
 
   // Hide .hamburger-menu when the screen is wider than 768px
   window.addEventListener("resize", handleNavigationAtSmallScreen);
-
-  const topic = document.querySelector("a.whyNoInternshipOrJob") as HTMLElement;
-  topic.addEventListener("click", handleTopic);
 };
 
 app();

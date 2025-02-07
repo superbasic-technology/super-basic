@@ -3,7 +3,6 @@ import { About } from "./about";
 import { Contact } from "./contact";
 import { Home } from "./home";
 import { MainNews } from "./news";
-import { WhyNoJobs } from "./WhyNoJobs";
 
 export const main = () => {
   const main = document.querySelector("main") as HTMLElement;
@@ -14,6 +13,5 @@ export const main = () => {
     new Contact().create(),
     new About().create(),
     new MainNews().create(),
-    new WhyNoJobs().create(),
   );
 };
