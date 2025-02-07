@@ -32,7 +32,7 @@ export class WhyNoInternshipOrJob {
     whyNoInternshipOrJob_para.setAttribute("class", "whyNoInternshipOrJob");
     whyNoInternshipOrJob_para.textContent = `
       តើហេតុអ្វីសិស្សដែលរៀនជំនាញទាក់ទងនឹងការសរសេរកូដ«coding»មិនអាចរកឱកាសហាត់ការ«internship»ឬ​ឱកាសការងារបាន?
-      សូមទាក់ទងមកយើងខ្ញុំតាមរយះTelegram ឬ facebook ខាងក្រោម។
+      សូមទាក់ទងមកយើងខ្ញុំតាមរយៈTelegram ឬ facebook ខាងក្រោមដើម្បីទទួលបានប្រឹក្សាដោយឥតគិតថ្លៃ។
     `;
 
     return whyNoInternshipOrJob_para;
