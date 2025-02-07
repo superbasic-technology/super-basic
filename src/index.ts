@@ -1,6 +1,6 @@
 import "./styles/main.css"
 import { header } from "./components/header";
-import { handleHamburgerMenu, handleCancel, handleContact, handleHome, handleAbout, handleNews, handleNavigationAtSmallScreen } from "./utility/handlers";
+import { handleHamburgerMenu, handleCancel, handleContact, handleHome, handleAbout, handleNews, handleNavigationAtSmallScreen, handleTopic } from "./utility/handlers";
 import { footer } from "./components/footer";
 import { main } from "./components/main";
 
@@ -34,6 +34,9 @@ export const applyHandlers = () => {
 
   // Hide .hamburger-menu when the screen is wider than 768px
   window.addEventListener("resize", handleNavigationAtSmallScreen);
+
+  const topic = document.querySelector("a.whyNoInternshipOrJob") as HTMLElement;
+  topic.addEventListener("click", handleTopic);
 };
 
 app();
