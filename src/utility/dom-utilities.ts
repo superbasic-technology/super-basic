@@ -53,3 +53,10 @@ export const appendToMain = (...elements: HTMLElement[]) => {
     ...elements
   );
 };
+
+// Take in an element as input and hide the element
+export const hideElement = (element: HTMLElement): void => {
+  if (element) {
+    element.style.display = "none";
+  }
+};
