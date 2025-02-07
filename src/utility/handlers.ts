@@ -52,3 +52,13 @@ export const handleNavigationAtSmallScreen = () => {
     handleHamburgerMenu();
   }
 };
+
+export const handleTopic = () => {
+  const topic = document.querySelector(".why-no-jobs") as HTMLElement;
+  topic.style.display = "flex";
+  hideHome();
+  hideContact();
+  hideAbout();
+  hideNews();
+
+};
