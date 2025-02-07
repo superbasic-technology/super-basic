@@ -29,6 +29,8 @@ const applyHandlers = () => {
     news.addEventListener("click", handlers_1.handleNews);
     // Hide .hamburger-menu when the screen is wider than 768px
     window.addEventListener("resize", handlers_1.handleNavigationAtSmallScreen);
+    const topic = document.querySelector("a.whyNoInternshipOrJob");
+    topic.addEventListener("click", handlers_1.handleTopic);
 };
 exports.applyHandlers = applyHandlers;
 (0, exports.app)();

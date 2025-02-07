@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.appendToMain = exports.showNews = exports.showAbout = exports.showContact = exports.hideNews = exports.hideHome = exports.hideMainContent = exports.hideAbout = exports.hideContact = exports.appendChildrenToParent = void 0;
+exports.hideElement = exports.appendToMain = exports.showNews = exports.showAbout = exports.showContact = exports.hideNews = exports.hideHome = exports.hideMainContent = exports.hideAbout = exports.hideContact = exports.appendChildrenToParent = void 0;
 const appendChildrenToParent = (parent, ...children) => {
     for (let i = 0; i < children.length; i += 1) {
         parent.appendChild(children[i]);
@@ -52,3 +52,10 @@ const appendToMain = (...elements) => {
     (0, exports.appendChildrenToParent)(main, ...elements);
 };
 exports.appendToMain = appendToMain;
+// Take in an element as input and hide the element
+const hideElement = (element) => {
+    if (element) {
+        element.style.display = "none";
+    }
+};
+exports.hideElement = hideElement;
